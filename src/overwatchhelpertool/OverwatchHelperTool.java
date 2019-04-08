@@ -16,7 +16,7 @@ public class OverwatchHelperTool {
      */
     public static void main(String[] args) {
         JFrame vindue = new JFrame( "Choose a map" ); 
-        vindue.add( new Menu() );
+        vindue.add( new MapPane() );
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
         vindue.pack();
         vindue.setVisible(true);

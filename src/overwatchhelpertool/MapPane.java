@@ -6,6 +6,7 @@
 package overwatchhelpertool;
 
 import javax.swing.ImageIcon;
+import java.io.File;
 /**
  *
  * @author phill
@@ -69,11 +70,9 @@ public class MapPane extends javax.swing.JPanel {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         String s = jComboBox1.getSelectedItem().toString();
         if (s.equals("Watchpoint Gibraltar")) {
-            
             try{
-            jLabel1.setIcon(new ImageIcon("C:\\Users\\phill\\OneDrive\\Dokumenter\\NetBeansProjects\\OverwatchHelperTool\\src\\overwatchhelpertool\\Map_WatchpointGibralta\\Watchpoint_Gibraltar_scene.jpg"));
+            jLabel1.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Map_WatchpointGibralta\\Watchpoint_Gibraltar_Top_Down_View.jpg").getAbsolutePath()));
             }catch(Exception e){
-                System.out.println("hello");
                 System.out.println(e);
             }
 

@@ -71,7 +71,7 @@ public class MapPane extends javax.swing.JPanel {
         String s = jComboBox1.getSelectedItem().toString();
         if (s.equals("Watchpoint Gibraltar")) {
             try{
-            jLabel1.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Map_WatchpointGibralta\\Watchpoint_Gibraltar_Top_Down_View.jpg").getAbsolutePath()));
+            jLabel1.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Map_WatchpointGibralta\\Watchpoint_Gibraltar_scene.jpg").getAbsolutePath()));
             }catch(Exception e){
                 System.out.println(e);
             }

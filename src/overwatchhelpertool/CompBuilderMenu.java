@@ -61,6 +61,11 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
 
         HeroS6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS6.setPreferredSize(new java.awt.Dimension(100, 20));
+        HeroS6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HeroS6ActionPerformed(evt);
+            }
+        });
 
         HeroS2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS2.setMinimumSize(new java.awt.Dimension(100, 20));
@@ -175,19 +180,39 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
     }// </editor-fold>//GEN-END:initComponents
 
     private void HeroS3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS3ActionPerformed
-        // TODO add your handling code here:
+         String s = HeroS3.getSelectedItem().toString();
+            try{
+            HeroPort3.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
+            }catch(Exception e){
+                System.out.println(e);
+            }
     }//GEN-LAST:event_HeroS3ActionPerformed
 
     private void HeroS5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS5ActionPerformed
-        // TODO add your handling code here:
+         String s = HeroS5.getSelectedItem().toString();
+            try{
+            HeroPort5.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
+            }catch(Exception e){
+                System.out.println(e);
+            }
     }//GEN-LAST:event_HeroS5ActionPerformed
 
     private void HeroS4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS4ActionPerformed
-        // TODO add your handling code here:
+        String s = HeroS4.getSelectedItem().toString();
+            try{
+            HeroPort4.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
+            }catch(Exception e){
+                System.out.println(e);
+            }
     }//GEN-LAST:event_HeroS4ActionPerformed
 
     private void HeroS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS2ActionPerformed
-        // TODO add your handling code here:
+         String s = HeroS2.getSelectedItem().toString();
+            try{
+            HeroPort2.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
+            }catch(Exception e){
+                System.out.println(e);
+            }
     }//GEN-LAST:event_HeroS2ActionPerformed
 
     private void HeroS1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS1ActionPerformed
@@ -200,6 +225,15 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
 
         
     }//GEN-LAST:event_HeroS1ActionPerformed
+
+    private void HeroS6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS6ActionPerformed
+         String s = HeroS6.getSelectedItem().toString();
+            try{
+            HeroPort6.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
+            }catch(Exception e){
+                System.out.println(e);
+            }
+    }//GEN-LAST:event_HeroS6ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

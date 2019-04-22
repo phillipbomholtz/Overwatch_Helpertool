@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
  * @author phill
  */
 public class CompBuilderMenu extends javax.swing.JPanel {
-
+private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
     /**
      * Creates new form CompBuilderMenu
      */
@@ -24,7 +24,7 @@ public class CompBuilderMenu extends javax.swing.JPanel {
             System.out.println(e);
         }
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -97,27 +97,27 @@ public class CompBuilderMenu extends javax.swing.JPanel {
         });
 
         HeroPort1.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
-        HeroPort1.setText("jLabel1");
+        HeroPort1.setText("Error in import");
         HeroPort1.setPreferredSize(new java.awt.Dimension(100, 100));
 
         HeroPort2.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
-        HeroPort2.setText("jLabel1");
+        HeroPort2.setText("Error in import");
         HeroPort2.setPreferredSize(new java.awt.Dimension(100, 100));
 
         HeroPort3.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
-        HeroPort3.setText("jLabel1");
+        HeroPort3.setText("Error in import");
         HeroPort3.setPreferredSize(new java.awt.Dimension(100, 100));
 
         HeroPort4.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
-        HeroPort4.setText("jLabel1");
+        HeroPort4.setText("Error in import");
         HeroPort4.setPreferredSize(new java.awt.Dimension(100, 100));
 
         HeroPort5.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
-        HeroPort5.setText("jLabel1");
+        HeroPort5.setText("Error in import");
         HeroPort5.setPreferredSize(new java.awt.Dimension(100, 100));
 
         HeroPort6.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
-        HeroPort6.setText("jLabel1");
+        HeroPort6.setText("Error in import");
         HeroPort6.setPreferredSize(new java.awt.Dimension(100, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -128,11 +128,11 @@ public class CompBuilderMenu extends javax.swing.JPanel {
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(HeroS1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(HeroS2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(HeroPort2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(HeroS3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -164,12 +164,12 @@ public class CompBuilderMenu extends javax.swing.JPanel {
                     .addComponent(HeroS5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(347, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -192,14 +192,13 @@ public class CompBuilderMenu extends javax.swing.JPanel {
 
     private void HeroS1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS1ActionPerformed
         String s = HeroS1.getSelectedItem().toString();
-        if (s.equals("Ana")) {
             try{
-            HeroPort1.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\hero_select_portrait_ANA.png").getAbsolutePath()));
+            HeroPort1.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
             }catch(Exception e){
                 System.out.println(e);
             }
 
-        }
+        
     }//GEN-LAST:event_HeroS1ActionPerformed
 
 

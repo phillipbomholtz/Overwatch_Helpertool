@@ -34,6 +34,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         HeroS1 = new javax.swing.JComboBox<>();
         HeroS6 = new javax.swing.JComboBox<>();
         HeroS2 = new javax.swing.JComboBox<>();
@@ -46,6 +47,29 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
         HeroPort4 = new javax.swing.JLabel();
         HeroPort5 = new javax.swing.JLabel();
         HeroPort6 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        noteBox = new javax.swing.JTextPane();
+        hanamura = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
+        horizonLunaColony = new javax.swing.JCheckBox();
+        paris = new javax.swing.JCheckBox();
+        templeOfAnubis = new javax.swing.JCheckBox();
+        volskayaIndustries = new javax.swing.JCheckBox();
+        eichenwalde = new javax.swing.JCheckBox();
+        hollywood = new javax.swing.JCheckBox();
+        kingsRow = new javax.swing.JCheckBox();
+        numbani = new javax.swing.JCheckBox();
+        busan = new javax.swing.JCheckBox();
+        ilios = new javax.swing.JCheckBox();
+        lijiangTower = new javax.swing.JCheckBox();
+        nepal = new javax.swing.JCheckBox();
+        oasis = new javax.swing.JCheckBox();
+        dorado = new javax.swing.JCheckBox();
+        junkertown = new javax.swing.JCheckBox();
+        rialto = new javax.swing.JCheckBox();
+        route66 = new javax.swing.JCheckBox();
+        blizzardWorld = new javax.swing.JCheckBox();
+        watchpointGibraltar = new javax.swing.JCheckBox();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -126,35 +150,127 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
         HeroPort6.setText("Error in import");
         HeroPort6.setPreferredSize(new java.awt.Dimension(100, 172));
 
+        noteBox.setText("Enter notes for this team comp here");
+        noteBox.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                noteBoxMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(noteBox);
+
+        hanamura.setText("Hanamura");
+
+        jLabel1.setText("Intended maps:");
+
+        horizonLunaColony.setText("Horizon Luna Colony");
+
+        paris.setText("Paris");
+
+        templeOfAnubis.setText("Temple Of Anubis");
+
+        volskayaIndustries.setText("Volskaya Industries");
+
+        eichenwalde.setText("Eichenwalde");
+
+        hollywood.setText("Hollywood");
+
+        kingsRow.setText("Kings Row");
+
+        numbani.setText("Numbani");
+
+        busan.setText("Busan");
+
+        ilios.setText("Ilios");
+
+        lijiangTower.setText("Lijiang Tower");
+
+        nepal.setText("Nepal");
+
+        oasis.setText("Oasis");
+
+        dorado.setText("Dorado");
+        dorado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                doradoActionPerformed(evt);
+            }
+        });
+
+        junkertown.setText("Junkertown");
+
+        rialto.setText("Rialto");
+
+        route66.setText("Route 66");
+
+        blizzardWorld.setText("Blizzard World");
+
+        watchpointGibraltar.setText("Watchpoint Gibraltar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(57, 57, 57)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HeroS1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HeroS2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HeroPort2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HeroS3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HeroPort3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HeroS1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HeroS2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HeroS3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HeroS4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HeroS5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroPort5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(HeroS6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HeroS4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HeroPort4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HeroS5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HeroPort5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(57, 57, 57)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(HeroS6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(hanamura, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(horizonLunaColony, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(paris, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(templeOfAnubis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(volskayaIndustries, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(eichenwalde, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(hollywood, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(kingsRow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(numbani, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(busan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lijiangTower, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(ilios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nepal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(oasis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(dorado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(watchpointGibraltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(blizzardWorld, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(route66, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(rialto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(junkertown, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -176,7 +292,42 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
                     .addComponent(HeroPort5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(275, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(hanamura)
+                            .addComponent(eichenwalde)
+                            .addComponent(ilios)
+                            .addComponent(junkertown))
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(horizonLunaColony)
+                            .addComponent(hollywood)
+                            .addComponent(lijiangTower)
+                            .addComponent(rialto))
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(paris)
+                            .addComponent(kingsRow)
+                            .addComponent(nepal)
+                            .addComponent(route66))
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(templeOfAnubis)
+                            .addComponent(numbani)
+                            .addComponent(oasis)
+                            .addComponent(blizzardWorld))
+                        .addGap(2, 2, 2)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(volskayaIndustries)
+                            .addComponent(busan)
+                            .addComponent(dorado)
+                            .addComponent(watchpointGibraltar)))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -236,6 +387,14 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
     }//GEN-LAST:event_HeroS6ActionPerformed
 
+    private void noteBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_noteBoxMouseClicked
+        noteBox.setText("");
+    }//GEN-LAST:event_noteBoxMouseClicked
+
+    private void doradoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_doradoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_doradoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HeroPort1;
@@ -250,5 +409,29 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
     private javax.swing.JComboBox<String> HeroS4;
     private javax.swing.JComboBox<String> HeroS5;
     private javax.swing.JComboBox<String> HeroS6;
+    private javax.swing.JCheckBox blizzardWorld;
+    private javax.swing.JCheckBox busan;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JCheckBox dorado;
+    private javax.swing.JCheckBox eichenwalde;
+    private javax.swing.JCheckBox hanamura;
+    private javax.swing.JCheckBox hollywood;
+    private javax.swing.JCheckBox horizonLunaColony;
+    private javax.swing.JCheckBox ilios;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox junkertown;
+    private javax.swing.JCheckBox kingsRow;
+    private javax.swing.JCheckBox lijiangTower;
+    private javax.swing.JCheckBox nepal;
+    private javax.swing.JTextPane noteBox;
+    private javax.swing.JCheckBox numbani;
+    private javax.swing.JCheckBox oasis;
+    private javax.swing.JCheckBox paris;
+    private javax.swing.JCheckBox rialto;
+    private javax.swing.JCheckBox route66;
+    private javax.swing.JCheckBox templeOfAnubis;
+    private javax.swing.JCheckBox volskayaIndustries;
+    private javax.swing.JCheckBox watchpointGibraltar;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -29,36 +33,84 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="HeroS1" min="-2" pref="106" max="-2" attributes="0"/>
-                  <Component id="HeroPort1" min="-2" pref="100" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="HeroS1" min="-2" pref="106" max="-2" attributes="0"/>
+                          <Component id="HeroPort1" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="HeroS2" min="-2" max="-2" attributes="0"/>
+                          <Component id="HeroPort2" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="HeroS3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="HeroPort3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="HeroS2" min="-2" max="-2" attributes="0"/>
-                  <Component id="HeroPort2" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="HeroS3" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="HeroPort3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="HeroS4" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="HeroPort4" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="HeroS5" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="HeroPort5" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="HeroPort6" min="-2" pref="100" max="-2" attributes="0"/>
-                  <Component id="HeroS6" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="HeroS4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="HeroPort4" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="HeroS5" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="HeroPort5" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="HeroPort6" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="HeroS6" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="hanamura" max="32767" attributes="0"/>
+                                  <Component id="horizonLunaColony" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="paris" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="templeOfAnubis" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="volskayaIndustries" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="eichenwalde" max="32767" attributes="0"/>
+                                  <Component id="hollywood" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="kingsRow" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="numbani" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="busan" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lijiangTower" max="32767" attributes="0"/>
+                                  <Component id="ilios" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="nepal" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="oasis" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="dorado" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="watchpointGibraltar" max="32767" attributes="0"/>
+                                  <Component id="blizzardWorld" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="route66" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="rialto" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="junkertown" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
               </Group>
               <EmptySpace pref="48" max="32767" attributes="0"/>
           </Group>
@@ -85,7 +137,49 @@
                   <Component id="HeroPort6" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="HeroPort1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="275" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="hanamura" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="eichenwalde" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="ilios" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="junkertown" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="horizonLunaColony" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="hollywood" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lijiangTower" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="rialto" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="paris" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="kingsRow" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="nepal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="route66" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="templeOfAnubis" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numbani" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="oasis" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="blizzardWorld" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="volskayaIndustries" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="busan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="dorado" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="watchpointGibraltar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jScrollPane1" min="-2" pref="246" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="23" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -432,6 +526,131 @@
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[100, 172]"/>
         </Property>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextPane" name="noteBox">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Enter notes for this team comp here"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="noteBoxMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JCheckBox" name="hanamura">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hanamura"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Intended maps:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="horizonLunaColony">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Horizon Luna Colony"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="paris">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Paris"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="templeOfAnubis">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Temple Of Anubis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="volskayaIndustries">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Volskaya Industries"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="eichenwalde">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eichenwalde"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="hollywood">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hollywood"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="kingsRow">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kings Row"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="numbani">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Numbani"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="busan">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Busan"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="ilios">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ilios"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="lijiangTower">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Lijiang Tower"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="nepal">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nepal"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="oasis">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Oasis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="dorado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Dorado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="doradoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="junkertown">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Junkertown"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="rialto">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rialto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="route66">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Route 66"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="blizzardWorld">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Blizzard World"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JCheckBox" name="watchpointGibraltar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Watchpoint Gibraltar"/>
       </Properties>
     </Component>
   </SubComponents>

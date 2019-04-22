@@ -7,6 +7,7 @@ package overwatchhelpertool;
 
 import java.io.File;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -70,6 +71,8 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
         route66 = new javax.swing.JCheckBox();
         blizzardWorld = new javax.swing.JCheckBox();
         watchpointGibraltar = new javax.swing.JCheckBox();
+        save = new javax.swing.JButton();
+        Discard = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -205,6 +208,15 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
 
         watchpointGibraltar.setText("Watchpoint Gibraltar");
 
+        save.setText("Save");
+        save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveActionPerformed(evt);
+            }
+        });
+
+        Discard.setText("Discard");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -270,7 +282,11 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
                                     .addComponent(blizzardWorld, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(route66, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(rialto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(junkertown, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                    .addComponent(junkertown, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(Discard, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -293,7 +309,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
                     .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(13, 13, 13)
@@ -325,7 +341,11 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
                             .addComponent(volskayaIndustries)
                             .addComponent(busan)
                             .addComponent(dorado)
-                            .addComponent(watchpointGibraltar)))
+                            .addComponent(watchpointGibraltar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(save)
+                            .addComponent(Discard)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
@@ -395,8 +415,21 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
         // TODO add your handling code here:
     }//GEN-LAST:event_doradoActionPerformed
 
+    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
+        helper.compSave(JOptionPane.showInputDialog("name this team composition"),
+                               HeroS1.getSelectedItem().toString(),
+                               HeroS2.getSelectedItem().toString(),
+                               HeroS3.getSelectedItem().toString(),
+                               HeroS4.getSelectedItem().toString(),
+                               HeroS5.getSelectedItem().toString(),
+                               HeroS6.getSelectedItem().toString(),
+                               noteBox.getText());
+       
+    }//GEN-LAST:event_saveActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Discard;
     private javax.swing.JLabel HeroPort1;
     private javax.swing.JLabel HeroPort2;
     private javax.swing.JLabel HeroPort3;
@@ -430,6 +463,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
     private javax.swing.JCheckBox paris;
     private javax.swing.JCheckBox rialto;
     private javax.swing.JCheckBox route66;
+    private javax.swing.JButton save;
     private javax.swing.JCheckBox templeOfAnubis;
     private javax.swing.JCheckBox volskayaIndustries;
     private javax.swing.JCheckBox watchpointGibraltar;

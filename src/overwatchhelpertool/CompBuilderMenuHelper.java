@@ -4,16 +4,41 @@
  * and open the template in the editor.
  */
 package overwatchhelpertool;
-
+import java.io.FileWriter;        //needed for file coms (outgoing)
+import java.io.BufferedWriter;    //for writing to file
+import java.io.IOException;       //exceptions for when something goes wrong
+import java.io.BufferedReader;    //for reading file
+import java.io.FileReader;        //needed for file coms (ingoing)
+import java.io.File;              //for creating file
+import java.util.StringTokenizer; //for reading , seperated files
 /**
  *
  * @author Phillip
  */
 public class CompBuilderMenuHelper {
-    CompBuilderMenuHelper(){
+    public CompBuilderMenuHelper(){
         
     }
     public String imagePathGiver(String name){
        return "hero-select-portrait-"+name.toUpperCase()+".png";
         }
+    
+    public void compSave(String name, 
+                         String hero1, 
+                         String hero2, 
+                         String hero3, 
+                         String hero4, 
+                         String hero5, 
+                         String hero6, 
+                         String note){
+        
+       try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
+             comp.write(hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note);
+             comp.close();
+       }catch(IOException e){
+           e.printStackTrace();
+       }
+      
+        
+    }
 }

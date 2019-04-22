@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package overwatchhelpertool;
-
+import javax.swing.*;
 /**
  *
- * @author Phillip
+ * @author phill
  */
 public class OverwatchHelperTool {
 
@@ -15,7 +15,11 @@ public class OverwatchHelperTool {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        JFrame vindue = new JFrame( "Choose a map" ); 
+        vindue.add( new TeamMenu() );
+        vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
+        vindue.pack();
+        vindue.setVisible(true);
     }
     
 }

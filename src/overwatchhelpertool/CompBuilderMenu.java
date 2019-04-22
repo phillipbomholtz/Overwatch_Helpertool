@@ -103,27 +103,28 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
 
         HeroPort1.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
         HeroPort1.setText("Error in import");
-        HeroPort1.setPreferredSize(new java.awt.Dimension(100, 100));
+        HeroPort1.setPreferredSize(new java.awt.Dimension(100, 172));
 
         HeroPort2.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
         HeroPort2.setText("Error in import");
-        HeroPort2.setPreferredSize(new java.awt.Dimension(100, 100));
+        HeroPort2.setPreferredSize(new java.awt.Dimension(100, 172));
+        HeroPort2.setRequestFocusEnabled(false);
 
         HeroPort3.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
         HeroPort3.setText("Error in import");
-        HeroPort3.setPreferredSize(new java.awt.Dimension(100, 100));
+        HeroPort3.setPreferredSize(new java.awt.Dimension(100, 172));
 
         HeroPort4.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
         HeroPort4.setText("Error in import");
-        HeroPort4.setPreferredSize(new java.awt.Dimension(100, 100));
+        HeroPort4.setPreferredSize(new java.awt.Dimension(100, 172));
 
         HeroPort5.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
         HeroPort5.setText("Error in import");
-        HeroPort5.setPreferredSize(new java.awt.Dimension(100, 100));
+        HeroPort5.setPreferredSize(new java.awt.Dimension(100, 172));
 
         HeroPort6.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\Inv.png").getAbsolutePath()));
         HeroPort6.setText("Error in import");
-        HeroPort6.setPreferredSize(new java.awt.Dimension(100, 100));
+        HeroPort6.setPreferredSize(new java.awt.Dimension(100, 172));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -175,7 +176,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
                     .addComponent(HeroPort5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(HeroPort1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(347, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

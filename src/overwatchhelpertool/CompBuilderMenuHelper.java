@@ -16,6 +16,7 @@ public class CompBuilderMenuHelper {
     public CompBuilderMenuHelper(){
         
     }
+    //retun image file name
     public String imagePathGiver(String name){
         if(name.equals("Select hero")){
             return "Inv.png";
@@ -40,10 +41,9 @@ public class CompBuilderMenuHelper {
         }else{
             compSaveWrite(name,toWrite);
         }
-       
-       
-        
+    
     }
+    //the actual writing part of the saver
     private void compSaveWrite(String name, String s){
          try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
              comp.write(s);

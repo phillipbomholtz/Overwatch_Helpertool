@@ -34,8 +34,6 @@ public class CompBuilderMenuHelper {
                          String note){
         File temp = new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt");
         
-        System.out.println("hello "+ temp.exists());
-        
         String toWrite = hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note;
         
         if(temp.exists()){

@@ -198,7 +198,7 @@
     <Component class="javax.swing.JComboBox" name="HeroS1">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="28">
+          <StringArray count="29">
             <StringItem index="0" value="Select hero"/>
             <StringItem index="1" value="Ana"/>
             <StringItem index="2" value="Ashe"/>
@@ -224,9 +224,10 @@
             <StringItem index="22" value="Torbj&#xf6;rn"/>
             <StringItem index="23" value="Tracer"/>
             <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Wreckingball"/>
-            <StringItem index="26" value="Zarya"/>
-            <StringItem index="27" value="Zenyatta"/>
+            <StringItem index="25" value="Winston"/>
+            <StringItem index="26" value="Wreckingball"/>
+            <StringItem index="27" value="Zarya"/>
+            <StringItem index="28" value="Zenyatta"/>
           </StringArray>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -243,7 +244,7 @@
     <Component class="javax.swing.JComboBox" name="HeroS6">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="28">
+          <StringArray count="29">
             <StringItem index="0" value="Select hero"/>
             <StringItem index="1" value="Ana"/>
             <StringItem index="2" value="Ashe"/>
@@ -269,9 +270,10 @@
             <StringItem index="22" value="Torbj&#xf6;rn"/>
             <StringItem index="23" value="Tracer"/>
             <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Wreckingball"/>
-            <StringItem index="26" value="Zarya"/>
-            <StringItem index="27" value="Zenyatta"/>
+            <StringItem index="25" value="Winston"/>
+            <StringItem index="26" value="Wreckingball"/>
+            <StringItem index="27" value="Zarya"/>
+            <StringItem index="28" value="Zenyatta"/>
           </StringArray>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -288,7 +290,7 @@
     <Component class="javax.swing.JComboBox" name="HeroS2">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="28">
+          <StringArray count="29">
             <StringItem index="0" value="Select hero"/>
             <StringItem index="1" value="Ana"/>
             <StringItem index="2" value="Ashe"/>
@@ -314,9 +316,10 @@
             <StringItem index="22" value="Torbj&#xf6;rn"/>
             <StringItem index="23" value="Tracer"/>
             <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Wreckingball"/>
-            <StringItem index="26" value="Zarya"/>
-            <StringItem index="27" value="Zenyatta"/>
+            <StringItem index="25" value="Winston"/>
+            <StringItem index="26" value="Wreckingball"/>
+            <StringItem index="27" value="Zarya"/>
+            <StringItem index="28" value="Zenyatta"/>
           </StringArray>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -336,7 +339,7 @@
     <Component class="javax.swing.JComboBox" name="HeroS3">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="28">
+          <StringArray count="29">
             <StringItem index="0" value="Select hero"/>
             <StringItem index="1" value="Ana"/>
             <StringItem index="2" value="Ashe"/>
@@ -362,9 +365,10 @@
             <StringItem index="22" value="Torbj&#xf6;rn"/>
             <StringItem index="23" value="Tracer"/>
             <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Wreckingball"/>
-            <StringItem index="26" value="Zarya"/>
-            <StringItem index="27" value="Zenyatta"/>
+            <StringItem index="25" value="Winston"/>
+            <StringItem index="26" value="Wreckingball"/>
+            <StringItem index="27" value="Zarya"/>
+            <StringItem index="28" value="Zenyatta"/>
           </StringArray>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -381,7 +385,7 @@
     <Component class="javax.swing.JComboBox" name="HeroS4">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="28">
+          <StringArray count="29">
             <StringItem index="0" value="Select hero"/>
             <StringItem index="1" value="Ana"/>
             <StringItem index="2" value="Ashe"/>
@@ -407,9 +411,10 @@
             <StringItem index="22" value="Torbj&#xf6;rn"/>
             <StringItem index="23" value="Tracer"/>
             <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Wreckingball"/>
-            <StringItem index="26" value="Zarya"/>
-            <StringItem index="27" value="Zenyatta"/>
+            <StringItem index="25" value="Winston"/>
+            <StringItem index="26" value="Wreckingball"/>
+            <StringItem index="27" value="Zarya"/>
+            <StringItem index="28" value="Zenyatta"/>
           </StringArray>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -429,7 +434,7 @@
     <Component class="javax.swing.JComboBox" name="HeroS5">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="28">
+          <StringArray count="29">
             <StringItem index="0" value="Select hero"/>
             <StringItem index="1" value="Ana"/>
             <StringItem index="2" value="Ashe"/>
@@ -455,9 +460,10 @@
             <StringItem index="22" value="Torbj&#xf6;rn"/>
             <StringItem index="23" value="Tracer"/>
             <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Wreckingball"/>
-            <StringItem index="26" value="Zarya"/>
-            <StringItem index="27" value="Zenyatta"/>
+            <StringItem index="25" value="Winston"/>
+            <StringItem index="26" value="Wreckingball"/>
+            <StringItem index="27" value="Zarya"/>
+            <StringItem index="28" value="Zenyatta"/>
           </StringArray>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">

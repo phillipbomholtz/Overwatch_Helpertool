@@ -78,7 +78,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        HeroS1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS1.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +86,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS6.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +94,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS2.setMinimumSize(new java.awt.Dimension(100, 20));
         HeroS2.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS2.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +103,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS3.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +111,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS4.setMinimumSize(new java.awt.Dimension(100, 20));
         HeroS4.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS4.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +120,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
         HeroS5.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

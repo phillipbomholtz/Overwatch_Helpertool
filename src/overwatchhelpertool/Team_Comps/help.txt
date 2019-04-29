@@ -1,1 +1,1 @@
-Select hero,Select hero,Select hero,Select hero,Select hero,Select hero,Enter notes for this team comp here
+Winston,Select hero,Select hero,Select hero,Select hero,Select hero,Enter notes for this team comp here

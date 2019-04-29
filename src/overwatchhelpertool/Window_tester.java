@@ -1,6 +1,7 @@
+package overwatchhelpertool;
+
 
 import javax.swing.JFrame;
-import overwatchhelpertool.CompBuilderMenu;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,7 +19,7 @@ public class Window_tester {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        JFrame vindue = new JFrame( "Choose a map" ); 
+        JFrame vindue = new JFrame( "BUILD THAT WALL" ); 
         vindue.add( new CompBuilderMenu() );
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
         vindue.pack();

@@ -13,10 +13,12 @@ import javax.swing.JOptionPane;
  * @author Phillip
  */
 public class CompBuilderMenuHelper {
+    
+    public boolean doneSaving;
     public CompBuilderMenuHelper(){
         
     }
-    //retun image file name
+    //retun image file name as string
     public String imagePathGiver(String name){
         if(name.equals("Select hero")){
             return "Inv.png";
@@ -37,9 +39,15 @@ public class CompBuilderMenuHelper {
             int result = JOptionPane.showConfirmDialog(null,"File already exists! wish to overwrite?");
             if(result == JOptionPane.YES_OPTION){
                compSaveWrite(name,toWrite);
+               doneSaving = true;
+            }else if(result == JOptionPane.NO_OPTION){
+                doneSaving = false;
+            }else{
+                doneSaving = true;
             }
         }else{
             compSaveWrite(name,toWrite);
+            doneSaving = true;
         }
     
     }

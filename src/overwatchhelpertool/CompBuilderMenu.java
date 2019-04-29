@@ -416,6 +416,8 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
     }//GEN-LAST:event_doradoActionPerformed
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
+        helper.doneSaving = false;
+        while(!helper.doneSaving){
         helper.compSave(JOptionPane.showInputDialog("name this team composition"),
                                HeroS1.getSelectedItem().toString(),
                                HeroS2.getSelectedItem().toString(),
@@ -424,6 +426,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
                                HeroS5.getSelectedItem().toString(),
                                HeroS6.getSelectedItem().toString(),
                                noteBox.getText());
+        }
        
     }//GEN-LAST:event_saveActionPerformed
 

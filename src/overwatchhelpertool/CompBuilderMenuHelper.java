@@ -33,28 +33,29 @@ public class CompBuilderMenuHelper {
                          String hero6, 
                          String note){
         File temp = new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt");
+        
         System.out.println("hello "+ temp.exists());
+        
+        String toWrite = hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note;
         
         if(temp.exists()){
             int result = JOptionPane.showConfirmDialog(null,"File already exists! wish to overwrite?");
             if(result == JOptionPane.YES_OPTION){
-                try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
-             comp.write(hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note);
-             comp.close();
-       }catch(IOException e){
-           e.printStackTrace();
-       }
+               compSaveWrite(name,toWrite);
             }
         }else{
-            try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
-             comp.write(hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note);
-             comp.close();
-       }catch(IOException e){
-           e.printStackTrace();
-       }
+            compSaveWrite(name,toWrite);
         }
        
        
         
+    }
+    private void compSaveWrite(String name, String s){
+         try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
+             comp.write(s);
+             comp.close();
+       }catch(IOException e){
+           e.printStackTrace();
+       }
     }
 }

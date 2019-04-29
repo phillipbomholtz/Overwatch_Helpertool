@@ -418,16 +418,26 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         helper.doneSaving = false;
         while(!helper.doneSaving){
-        helper.compSave(JOptionPane.showInputDialog("name this team composition"),
-                               HeroS1.getSelectedItem().toString(),
-                               HeroS2.getSelectedItem().toString(),
-                               HeroS3.getSelectedItem().toString(),
-                               HeroS4.getSelectedItem().toString(),
-                               HeroS5.getSelectedItem().toString(),
-                               HeroS6.getSelectedItem().toString(),
-                               noteBox.getText());
+            String s = JOptionPane.showInputDialog("name this team composition");
+            helper.compSave(s, HeroS1.getSelectedItem().toString(),
+                             HeroS2.getSelectedItem().toString(),
+                             HeroS3.getSelectedItem().toString(),
+                             HeroS4.getSelectedItem().toString(),
+                             HeroS5.getSelectedItem().toString(),
+                             HeroS6.getSelectedItem().toString(),
+                             noteBox.getText());
+            
+            //load all map states into an array
+            boolean[] A = {hanamura.isSelected(),horizonLunaColony.isSelected(),
+                           paris.isSelected(),templeOfAnubis.isSelected(),
+                           volskayaIndustries.isSelected(), eichenwalde.isSelected(),
+                           hollywood.isSelected(),kingsRow.isSelected(),numbani.isSelected(),
+                           busan.isSelected(),ilios.isSelected(),lijiangTower.isSelected(),
+                           nepal.isSelected(), oasis.isSelected(), dorado.isSelected(),
+                           junkertown.isSelected(),rialto.isSelected(),route66.isSelected(),
+                           blizzardWorld.isSelected(),watchpointGibraltar.isSelected()};
+            helper.saveMaps(s, A);
         }
-       
     }//GEN-LAST:event_saveActionPerformed
 
 

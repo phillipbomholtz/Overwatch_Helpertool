@@ -8,6 +8,8 @@ import java.io.FileWriter;        //needed for file coms (outgoing)
 import java.io.IOException;       //exceptions for when something goes wrong
 import java.io.File;              //for creating file
 import javax.swing.JOptionPane;
+import java.lang.StringBuilder;
+
 /**
  *
  * @author Phillip
@@ -31,10 +33,11 @@ public class CompBuilderMenuHelper {
     public void compSave(String name, String hero1, String hero2, String hero3, 
                          String hero4, String hero5, String hero6, String note){
         
+        if(name != null){
         File temp = new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt");
         
         String toWrite = hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note;
-        
+
         if(temp.exists()){
             int result = JOptionPane.showConfirmDialog(null,"File already exists! wish to overwrite?");
             if(result == JOptionPane.YES_OPTION){
@@ -49,7 +52,13 @@ public class CompBuilderMenuHelper {
             compSaveWrite(name,toWrite);
             doneSaving = true;
         }
+        }
     
+    }
+    
+    public void saveMaps(String name, boolean[] maps){
+        StringBuilder toWrite = new StringBuilder();
+      
     }
     //the actual writing part of the saver
     private void compSaveWrite(String name, String s){

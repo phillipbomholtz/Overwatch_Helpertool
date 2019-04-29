@@ -11,6 +11,7 @@ import java.io.BufferedReader;    //for reading file
 import java.io.FileReader;        //needed for file coms (ingoing)
 import java.io.File;              //for creating file
 import java.util.StringTokenizer; //for reading , seperated files
+import javax.swing.JOptionPane;
 /**
  *
  * @author Phillip
@@ -31,14 +32,29 @@ public class CompBuilderMenuHelper {
                          String hero5, 
                          String hero6, 
                          String note){
+        File temp = new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt");
+        System.out.println("hello "+ temp.exists());
         
-       try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
+        if(temp.exists()){
+            int result = JOptionPane.showConfirmDialog(null,"File already exists! wish to overwrite?");
+            if(result == JOptionPane.YES_OPTION){
+                try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
              comp.write(hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note);
              comp.close();
        }catch(IOException e){
            e.printStackTrace();
        }
-      
+            }
+        }else{
+            try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
+             comp.write(hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note);
+             comp.close();
+       }catch(IOException e){
+           e.printStackTrace();
+       }
+        }
+       
+       
         
     }
 }

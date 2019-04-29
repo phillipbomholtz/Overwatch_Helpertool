@@ -1,1 +1,1 @@
-Winston,Select hero,Select hero,Select hero,Select hero,Select hero,Enter notes for this team comp here
+Brigitte,Ana,Doomfist,Ashe,Dva,Doomfist,hello

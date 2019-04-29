@@ -17,9 +17,14 @@ public class CompBuilderMenuHelper {
         
     }
     public String imagePathGiver(String name){
+        if(name.equals("Select hero")){
+            return "Inv.png";
+        }else{
        return "hero-select-portrait-"+name.toUpperCase()+".png";
         }
+        }
     
+    //method for building , separeted files and saving to a file
     public void compSave(String name, String hero1, String hero2, String hero3, 
                          String hero4, String hero5, String hero6, String note){
         

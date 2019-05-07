@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * the base structure of a day in a schedule
  */
 package overwatchhelpertool;
 import java.util.ArrayList;
@@ -11,7 +9,17 @@ import java.util.ArrayList;
  */
 public class Day {
     public String name;
-    private ArrayList timeStreches = new ArrayList();
+    private ArrayList timeStreches = new ArrayList();  //an array of streches
     
+    public Day(){
+        this.name = "Monday";  
+    }
     
+    public Day(String name){
+        this.name = name;
+    }
+    
+    public void addStrech(TimeStrech strech){
+        timeStreches.add(strech);
+    }
 }

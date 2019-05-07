@@ -12,4 +12,8 @@ public class Schedule {
     public Schedule(){
         
     }
+    
+    public void addDay(Day day){
+        days.add(day);
+    }
 }

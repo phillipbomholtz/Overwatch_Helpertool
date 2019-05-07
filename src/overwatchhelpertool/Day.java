@@ -19,7 +19,6 @@ public class Day {
         this.name = name;
     }
     
-    //add a strech of time to this day
     public void addStrech(TimeStrech strech){
         timeStreches.add(strech);
     }

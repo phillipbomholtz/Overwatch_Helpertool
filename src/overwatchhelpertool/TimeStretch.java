@@ -5,7 +5,7 @@ package overwatchhelpertool;
 
 /**
  *
- * @author Phillip
+ * @author Phillip Bomholtz
  */
 public class TimeStretch {
     

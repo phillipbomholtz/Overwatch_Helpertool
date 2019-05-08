@@ -25,6 +25,7 @@ public class CompBuilderMenuHelper {
         if(name.equals("Select hero")){
             return "Inv.png";
         }else{
+            System.out.println(name.toUpperCase());
        return "hero-select-portrait-"+name.toUpperCase()+".png";
         }
         }

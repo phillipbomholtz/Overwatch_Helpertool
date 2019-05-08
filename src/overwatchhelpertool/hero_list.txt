@@ -1,1 +1,1 @@
-Select hero, Ana, Ashe, Baptiste, Bastion, Brigitte, Doomfist, Dva, Genji, Hanzo, Junkrat, Lucio, Mei, Mercy, Moira, Orisa, Pharah, Reaper, Reinhardt, Soldier76, Sombra, Symmetra, Torbjörn, Tracer, Widowmaker, Winston, Wreckingball, Zarya, Zenyatta
+Select hero,Ana,Ashe,Baptiste,Bastion,Brigitte,Doomfist,Dva,Genji,Hanzo,Junkrat,Lucio,Mei,Mercy,Moira,Orisa,Pharah,Reaper,Reinhardt,Soldier76,Sombra,Symmetra,Torbjörn,Tracer,Widowmaker,Winston,Wreckingball,Zarya,Zenyatta

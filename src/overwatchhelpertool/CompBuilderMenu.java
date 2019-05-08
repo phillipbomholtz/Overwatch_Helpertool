@@ -362,6 +362,7 @@ private String[] heroString;
     private void HeroS3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS3ActionPerformed
          String s = HeroS3.getSelectedItem().toString();
             try{
+                System.out.println("hello");
             HeroPort3.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
             }catch(Exception e){
                 System.out.println(e);

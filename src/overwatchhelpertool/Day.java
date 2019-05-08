@@ -2,6 +2,7 @@
  * the base structure of a day in a schedule
  */
 package overwatchhelpertool;
+import java.util.List;
 import java.util.ArrayList;
 /**
  *
@@ -9,14 +10,16 @@ import java.util.ArrayList;
  */
 public class Day {
     public String name;
-    private ArrayList timeStreches = new ArrayList();  //an array of streches
+    private List<TimeStrechs> timeStreches;  //an array of streches
     
     public Day(){
-        this.name = "Monday";  
+        this.name = "Monday";
+        this.timeStreches  = new ArrayList<>();
     }
     
     public Day(String name){
         this.name = name;
+        this.timeStreches  = new ArrayList<>();
     }
     
     public void addStrech(TimeStrechs strech){

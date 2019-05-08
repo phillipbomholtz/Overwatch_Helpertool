@@ -9,10 +9,10 @@ import java.util.ArrayList;
  * @author Phillip Bomholtz
  */
 public class Schedule {
-    private List<Day> days = new ArrayList<>();
+    private List<Day> days;
     
     public Schedule(){
-        
+        this.days  = new ArrayList<>();
     }
     
     //add a day to the schedule
@@ -20,6 +20,7 @@ public class Schedule {
         days.add(day);
     }
     
+    //return a given day
     public Day giveDayAtIndex(int i){
         return days.get(i);
     }

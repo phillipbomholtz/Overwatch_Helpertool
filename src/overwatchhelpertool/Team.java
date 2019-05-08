@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Phillip
+ * @author Phillip Bomholtz
  */
 public class Team {
    

@@ -5,7 +5,7 @@ package overwatchhelpertool;
 import java.util.ArrayList;
 /**
  *
- * @author Phillip
+ * @author Phillip Bomholtz
  */
 public class Day {
     public String name;

@@ -12,7 +12,7 @@ import java.lang.StringBuilder;
 
 /**
  *
- * @author Phillip
+ * @author Phillip bomholtz
  */
 public class CompBuilderMenuHelper {
     

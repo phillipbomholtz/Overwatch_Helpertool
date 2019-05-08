@@ -18,6 +18,8 @@ public class PlayerScheduler {
         week = arr;                         //initialize with call array
     }
     
+    
+    
     public Schedule buildSchedule(){
         Day[] weekdays = new Day[weeklength];       //an array of the days of the week
         TimeStrechs[] tempArr = new TimeStrechs[1]; //a temp array to hold timestrech values
@@ -31,9 +33,12 @@ public class PlayerScheduler {
         }
         return finishSchedule(weekdays,weeklength);                              //return a build schedule
     }
+    
+    
+    
     //method for taking individual timestreches and pumping them into a day to 
     //be used elsewere.
-    public Day buildDay(TimeStrechs[] arr, int size,String name){
+    private Day buildDay(TimeStrechs[] arr, int size,String name){
         Day newDay = new Day(name);
         for(int i = 0; i < size;i++){
             newDay.addStrech(arr[i]);
@@ -41,14 +46,18 @@ public class PlayerScheduler {
         return newDay;
     }
     
+    
+    
     //method for adding days together to build a complete schedule
-    public Schedule finishSchedule(Day[] arr,int size){
+    private Schedule finishSchedule(Day[] arr,int size){
         Schedule newSchedule = new Schedule();
         for(int i = 0; i < size;i++){
             newSchedule.addDay(arr[i]);
         }
         return newSchedule;
     }
+    
+    
     
     //gives a name to the days so that they may be properly remembered
     //if the number goes over 6 means that there are more than 7 days witch is a bad error

@@ -22,10 +22,12 @@ public class Schedule {
         amountOfDays++;
     }
     
-    
-    
     //return a given day
     public Day giveDayAtIndex(int i){
         return days.get(i);
+    }
+    
+    public int giveDayAmount(){
+        return amountOfDays;
     }
 }

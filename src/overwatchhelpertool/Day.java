@@ -12,11 +12,6 @@ public class Day {
     public String name;
     private List<TimeStretch> timeStreches;  //an array of streches
     
-    public Day(){
-        this.name = "Monday";
-        this.timeStreches  = new ArrayList<>();
-    }
-    
     public Day(String name){
         this.name = name;
         this.timeStreches  = new ArrayList<>();

@@ -7,12 +7,12 @@ package overwatchhelpertool;
  *
  * @author Phillip Bomholtz
  */
-public class Scheduler {
+public class PlayerScheduler {
     
 
     private Player playerOne;
     
-    public Scheduler(){
+    public PlayerScheduler(){
 
     }
     

@@ -9,9 +9,6 @@ package overwatchhelpertool;
  */
 public class PlayerScheduler {
     
-
-    private Player playerOne;
-    
     public PlayerScheduler(){
 
     }
@@ -26,5 +23,13 @@ public class PlayerScheduler {
         return newDay;
     }
     
+    //method for adding days together to build a complete schedule
+    public Schedule buildSchedule(Day[] arr,int size){
+        Schedule newSchedule = new Schedule();
+        for(int i = 0; i < size;i++){
+            newSchedule.addDay(arr[i]);
+        }
+        return newSchedule;
+    }
     
 }

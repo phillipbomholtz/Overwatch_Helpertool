@@ -9,12 +9,12 @@ package overwatchhelpertool;
  */
 public class PlayerScheduler {
     
-    private TimeStrechs[][] week;  //an array of arrays of all timestreches in unorganized fashion
+    private TimeStretch[][] week;  //an array of arrays of all timestreches in unorganized fashion
     private int weeklength;        //length of the week (should be 7 but you never know)
     
-    public PlayerScheduler(TimeStrechs[][] arr,int x){
+    public PlayerScheduler(TimeStretch[][] arr,int x){
         int weeklength = x;
-        this.week = new TimeStrechs[x][];
+        this.week = new TimeStretch[x][];
         week = arr;                         //initialize with call array
     }
     
@@ -22,11 +22,11 @@ public class PlayerScheduler {
     
     public Schedule buildSchedule(){
         Day[] weekdays = new Day[weeklength];       //an array of the days of the week
-        TimeStrechs[] tempArr = new TimeStrechs[1]; //a temp array to hold timestrech values
+        TimeStretch[] tempArr = new TimeStretch[1]; //a temp array to hold timestrech values
         
         for(int i = 0; i < weeklength; i++){                                     //loop through days
             for(int u = 0; u < week[i].length;u++){                              //loop through timestreches     
-                tempArr = new TimeStrechs[week[i].length];                       //define temp array as new array of proper size
+                tempArr = new TimeStretch[week[i].length];                       //define temp array as new array of proper size
                 tempArr[u] = week[i][u];                                         //load in timestrech
             }
             weekdays[i] = buildDay(tempArr,week[i].length,giveDayName(i));       //build a day of the timestrech just read
@@ -38,7 +38,7 @@ public class PlayerScheduler {
     
     //method for taking individual timestreches and pumping them into a day to 
     //be used elsewere.
-    private Day buildDay(TimeStrechs[] arr, int size,String name){
+    private Day buildDay(TimeStretch[] arr, int size,String name){
         Day newDay = new Day(name);
         for(int i = 0; i < size;i++){
             newDay.addStrech(arr[i]);

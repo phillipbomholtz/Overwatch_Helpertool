@@ -7,13 +7,13 @@ package overwatchhelpertool;
  *
  * @author Phillip
  */
-public class TimeStrechs {
+public class TimeStretch {
     
         //the definition of a strech of time
         private int startSecond;
         private int endSecond;
         
-        public TimeStrechs(int start, int end){
+        public TimeStretch(int start, int end){
             this.startSecond = start;
             this.endSecond = end;
         }

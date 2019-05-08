@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import overwatchhelpertool.TimeStrechs;
+import overwatchhelpertool.TimeStretch;
 /**
  *
  * @author Phillip Bomholtz
@@ -43,41 +43,41 @@ public class PlayerSchedulerTest {
     @Test
     public void testBuildSchedule() {
         System.out.println("buildSchedule");
-        TimeStrechs[][] test = {{new TimeStrechs(10,20),new TimeStrechs(100,200)},  //monday
-                                {new TimeStrechs(10,20),new TimeStrechs(100,200)},  //tuesday
-                                {new TimeStrechs(10,20),new TimeStrechs(100,200)},  //wednesday
-                                {new TimeStrechs(10,20),new TimeStrechs(100,200)},  //thursday
-                                {new TimeStrechs(10,20),new TimeStrechs(100,200)},  //friday
-                                {new TimeStrechs(10,20),new TimeStrechs(100,200)},  //saturday
-                                {new TimeStrechs(10,20),new TimeStrechs(100,200)}}; //sunday
+        TimeStretch[][] test = {{new TimeStretch(10,20),new TimeStretch(100,200)},  //monday
+                                {new TimeStretch(10,20),new TimeStretch(100,200)},  //tuesday
+                                {new TimeStretch(10,20),new TimeStretch(100,200)},  //wednesday
+                                {new TimeStretch(10,20),new TimeStretch(100,200)},  //thursday
+                                {new TimeStretch(10,20),new TimeStretch(100,200)},  //friday
+                                {new TimeStretch(10,20),new TimeStretch(100,200)},  //saturday
+                                {new TimeStretch(10,20),new TimeStretch(100,200)}}; //sunday
         
         Day monday = new Day ("Monday");
-        monday.addStrech(new TimeStrechs(10,20));
-        monday.addStrech(new TimeStrechs(100,200));
+        monday.addStrech(new TimeStretch(10,20));
+        monday.addStrech(new TimeStretch(100,200));
         
         Day tuesday = new Day ("Tuesday");
-        tuesday.addStrech(new TimeStrechs(10,20));
-        tuesday.addStrech(new TimeStrechs(100,200));
+        tuesday.addStrech(new TimeStretch(10,20));
+        tuesday.addStrech(new TimeStretch(100,200));
         
         Day wednesday = new Day ("Wednesday");
-        wednesday.addStrech(new TimeStrechs(10,20));
-        wednesday.addStrech(new TimeStrechs(100,200));
+        wednesday.addStrech(new TimeStretch(10,20));
+        wednesday.addStrech(new TimeStretch(100,200));
         
         Day thursday = new Day ("Thursday");
-        thursday.addStrech(new TimeStrechs(10,20));
-        thursday.addStrech(new TimeStrechs(100,200));
+        thursday.addStrech(new TimeStretch(10,20));
+        thursday.addStrech(new TimeStretch(100,200));
         
         Day friday = new Day ("Friday");
-        friday.addStrech(new TimeStrechs(10,20));
-        friday.addStrech(new TimeStrechs(100,200));
+        friday.addStrech(new TimeStretch(10,20));
+        friday.addStrech(new TimeStretch(100,200));
         
         Day saturday = new Day ("Saturday");
-        saturday.addStrech(new TimeStrechs(10,20));
-        saturday.addStrech(new TimeStrechs(100,200));
+        saturday.addStrech(new TimeStretch(10,20));
+        saturday.addStrech(new TimeStretch(100,200));
         
         Day sunday = new Day ("Sunday");
-        sunday.addStrech(new TimeStrechs(10,20));
-        sunday.addStrech(new TimeStrechs(100,200));
+        sunday.addStrech(new TimeStretch(10,20));
+        sunday.addStrech(new TimeStretch(100,200));
         
         Schedule testSchedule = new Schedule();
         testSchedule.addDay(monday);

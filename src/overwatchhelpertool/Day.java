@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Day {
     public String name;
-    private List<TimeStrechs> timeStreches;  //an array of streches
+    private List<TimeStretch> timeStreches;  //an array of streches
     
     public Day(){
         this.name = "Monday";
@@ -22,7 +22,7 @@ public class Day {
         this.timeStreches  = new ArrayList<>();
     }
     
-    public void addStrech(TimeStrechs strech){
+    public void addStrech(TimeStretch strech){
         timeStreches.add(strech);
     }
 }

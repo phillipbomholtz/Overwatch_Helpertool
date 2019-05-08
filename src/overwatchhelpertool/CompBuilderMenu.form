@@ -197,38 +197,8 @@
   <SubComponents>
     <Component class="javax.swing.JComboBox" name="HeroS1">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="29">
-            <StringItem index="0" value="Select hero"/>
-            <StringItem index="1" value="Ana"/>
-            <StringItem index="2" value="Ashe"/>
-            <StringItem index="3" value="Baptiste"/>
-            <StringItem index="4" value="Bastion"/>
-            <StringItem index="5" value="Brigitte"/>
-            <StringItem index="6" value="Doomfist"/>
-            <StringItem index="7" value="Dva"/>
-            <StringItem index="8" value="Genji"/>
-            <StringItem index="9" value="Hanzo"/>
-            <StringItem index="10" value="Junkrat"/>
-            <StringItem index="11" value="Lucio"/>
-            <StringItem index="12" value="Mei"/>
-            <StringItem index="13" value="Mercy"/>
-            <StringItem index="14" value="Moira"/>
-            <StringItem index="15" value="Orisa"/>
-            <StringItem index="16" value="Pharah"/>
-            <StringItem index="17" value="Reaper"/>
-            <StringItem index="18" value="Reinhardt"/>
-            <StringItem index="19" value="Soldier76"/>
-            <StringItem index="20" value="Sombra"/>
-            <StringItem index="21" value="Symmetra"/>
-            <StringItem index="22" value="Torbj&#xf6;rn"/>
-            <StringItem index="23" value="Tracer"/>
-            <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Winston"/>
-            <StringItem index="26" value="Wreckingball"/>
-            <StringItem index="27" value="Zarya"/>
-            <StringItem index="28" value="Zenyatta"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(heroString)" type="code"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[100, 20]"/>
@@ -243,38 +213,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="HeroS6">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="29">
-            <StringItem index="0" value="Select hero"/>
-            <StringItem index="1" value="Ana"/>
-            <StringItem index="2" value="Ashe"/>
-            <StringItem index="3" value="Baptiste"/>
-            <StringItem index="4" value="Bastion"/>
-            <StringItem index="5" value="Brigitte"/>
-            <StringItem index="6" value="Doomfist"/>
-            <StringItem index="7" value="Dva"/>
-            <StringItem index="8" value="Genji"/>
-            <StringItem index="9" value="Hanzo"/>
-            <StringItem index="10" value="Junkrat"/>
-            <StringItem index="11" value="Lucio"/>
-            <StringItem index="12" value="Mei"/>
-            <StringItem index="13" value="Mercy"/>
-            <StringItem index="14" value="Moira"/>
-            <StringItem index="15" value="Orisa"/>
-            <StringItem index="16" value="Pharah"/>
-            <StringItem index="17" value="Reaper"/>
-            <StringItem index="18" value="Reinhardt"/>
-            <StringItem index="19" value="Soldier76"/>
-            <StringItem index="20" value="Sombra"/>
-            <StringItem index="21" value="Symmetra"/>
-            <StringItem index="22" value="Torbj&#xf6;rn"/>
-            <StringItem index="23" value="Tracer"/>
-            <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Winston"/>
-            <StringItem index="26" value="Wreckingball"/>
-            <StringItem index="27" value="Zarya"/>
-            <StringItem index="28" value="Zenyatta"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(heroString)" type="code"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[100, 20]"/>
@@ -289,38 +229,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="HeroS2">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="29">
-            <StringItem index="0" value="Select hero"/>
-            <StringItem index="1" value="Ana"/>
-            <StringItem index="2" value="Ashe"/>
-            <StringItem index="3" value="Baptiste"/>
-            <StringItem index="4" value="Bastion"/>
-            <StringItem index="5" value="Brigitte"/>
-            <StringItem index="6" value="Doomfist"/>
-            <StringItem index="7" value="Dva"/>
-            <StringItem index="8" value="Genji"/>
-            <StringItem index="9" value="Hanzo"/>
-            <StringItem index="10" value="Junkrat"/>
-            <StringItem index="11" value="Lucio"/>
-            <StringItem index="12" value="Mei"/>
-            <StringItem index="13" value="Mercy"/>
-            <StringItem index="14" value="Moira"/>
-            <StringItem index="15" value="Orisa"/>
-            <StringItem index="16" value="Pharah"/>
-            <StringItem index="17" value="Reaper"/>
-            <StringItem index="18" value="Reinhardt"/>
-            <StringItem index="19" value="Soldier76"/>
-            <StringItem index="20" value="Sombra"/>
-            <StringItem index="21" value="Symmetra"/>
-            <StringItem index="22" value="Torbj&#xf6;rn"/>
-            <StringItem index="23" value="Tracer"/>
-            <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Winston"/>
-            <StringItem index="26" value="Wreckingball"/>
-            <StringItem index="27" value="Zarya"/>
-            <StringItem index="28" value="Zenyatta"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(heroString)" type="code"/>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[100, 20]"/>
@@ -338,38 +248,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="HeroS3">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="29">
-            <StringItem index="0" value="Select hero"/>
-            <StringItem index="1" value="Ana"/>
-            <StringItem index="2" value="Ashe"/>
-            <StringItem index="3" value="Baptiste"/>
-            <StringItem index="4" value="Bastion"/>
-            <StringItem index="5" value="Brigitte"/>
-            <StringItem index="6" value="Doomfist"/>
-            <StringItem index="7" value="Dva"/>
-            <StringItem index="8" value="Genji"/>
-            <StringItem index="9" value="Hanzo"/>
-            <StringItem index="10" value="Junkrat"/>
-            <StringItem index="11" value="Lucio"/>
-            <StringItem index="12" value="Mei"/>
-            <StringItem index="13" value="Mercy"/>
-            <StringItem index="14" value="Moira"/>
-            <StringItem index="15" value="Orisa"/>
-            <StringItem index="16" value="Pharah"/>
-            <StringItem index="17" value="Reaper"/>
-            <StringItem index="18" value="Reinhardt"/>
-            <StringItem index="19" value="Soldier76"/>
-            <StringItem index="20" value="Sombra"/>
-            <StringItem index="21" value="Symmetra"/>
-            <StringItem index="22" value="Torbj&#xf6;rn"/>
-            <StringItem index="23" value="Tracer"/>
-            <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Winston"/>
-            <StringItem index="26" value="Wreckingball"/>
-            <StringItem index="27" value="Zarya"/>
-            <StringItem index="28" value="Zenyatta"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(heroString)" type="code"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[100, 20]"/>
@@ -384,38 +264,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="HeroS4">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="29">
-            <StringItem index="0" value="Select hero"/>
-            <StringItem index="1" value="Ana"/>
-            <StringItem index="2" value="Ashe"/>
-            <StringItem index="3" value="Baptiste"/>
-            <StringItem index="4" value="Bastion"/>
-            <StringItem index="5" value="Brigitte"/>
-            <StringItem index="6" value="Doomfist"/>
-            <StringItem index="7" value="Dva"/>
-            <StringItem index="8" value="Genji"/>
-            <StringItem index="9" value="Hanzo"/>
-            <StringItem index="10" value="Junkrat"/>
-            <StringItem index="11" value="Lucio"/>
-            <StringItem index="12" value="Mei"/>
-            <StringItem index="13" value="Mercy"/>
-            <StringItem index="14" value="Moira"/>
-            <StringItem index="15" value="Orisa"/>
-            <StringItem index="16" value="Pharah"/>
-            <StringItem index="17" value="Reaper"/>
-            <StringItem index="18" value="Reinhardt"/>
-            <StringItem index="19" value="Soldier76"/>
-            <StringItem index="20" value="Sombra"/>
-            <StringItem index="21" value="Symmetra"/>
-            <StringItem index="22" value="Torbj&#xf6;rn"/>
-            <StringItem index="23" value="Tracer"/>
-            <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Winston"/>
-            <StringItem index="26" value="Wreckingball"/>
-            <StringItem index="27" value="Zarya"/>
-            <StringItem index="28" value="Zenyatta"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(heroString)" type="code"/>
         </Property>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[100, 20]"/>
@@ -433,38 +283,8 @@
     </Component>
     <Component class="javax.swing.JComboBox" name="HeroS5">
       <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="29">
-            <StringItem index="0" value="Select hero"/>
-            <StringItem index="1" value="Ana"/>
-            <StringItem index="2" value="Ashe"/>
-            <StringItem index="3" value="Baptiste"/>
-            <StringItem index="4" value="Bastion"/>
-            <StringItem index="5" value="Brigitte"/>
-            <StringItem index="6" value="Doomfist"/>
-            <StringItem index="7" value="Dva"/>
-            <StringItem index="8" value="Genji"/>
-            <StringItem index="9" value="Hanzo"/>
-            <StringItem index="10" value="Junkrat"/>
-            <StringItem index="11" value="Lucio"/>
-            <StringItem index="12" value="Mei"/>
-            <StringItem index="13" value="Mercy"/>
-            <StringItem index="14" value="Moira"/>
-            <StringItem index="15" value="Orisa"/>
-            <StringItem index="16" value="Pharah"/>
-            <StringItem index="17" value="Reaper"/>
-            <StringItem index="18" value="Reinhardt"/>
-            <StringItem index="19" value="Soldier76"/>
-            <StringItem index="20" value="Sombra"/>
-            <StringItem index="21" value="Symmetra"/>
-            <StringItem index="22" value="Torbj&#xf6;rn"/>
-            <StringItem index="23" value="Tracer"/>
-            <StringItem index="24" value="Widowmaker"/>
-            <StringItem index="25" value="Winston"/>
-            <StringItem index="26" value="Wreckingball"/>
-            <StringItem index="27" value="Zarya"/>
-            <StringItem index="28" value="Zenyatta"/>
-          </StringArray>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(heroString)" type="code"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[100, 20]"/>

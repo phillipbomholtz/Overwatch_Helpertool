@@ -6,8 +6,14 @@
 package overwatchhelpertool;
 
 import java.io.File;
+import java.io.FileReader;        //needed for reading file
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.util.StringTokenizer;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,10 +21,12 @@ import javax.swing.JOptionPane;
  */
 public class CompBuilderMenu extends javax.swing.JPanel {
 private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
+private String[] heroString;
     /**
      * Creates new form CompBuilderMenu
      */
     public CompBuilderMenu() {
+        heroString = heroStringRead();
         try{
         initComponents();
         }catch(Exception e){
@@ -78,7 +86,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        HeroS1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS1.setModel(new javax.swing.DefaultComboBoxModel<>(heroString));
         HeroS1.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,7 +94,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS6.setModel(new javax.swing.DefaultComboBoxModel<>(heroString));
         HeroS6.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +102,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS2.setModel(new javax.swing.DefaultComboBoxModel<>(heroString));
         HeroS2.setMinimumSize(new java.awt.Dimension(100, 20));
         HeroS2.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS2.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +111,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS3.setModel(new javax.swing.DefaultComboBoxModel<>(heroString));
         HeroS3.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +119,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS4.setModel(new javax.swing.DefaultComboBoxModel<>(heroString));
         HeroS4.setMinimumSize(new java.awt.Dimension(100, 20));
         HeroS4.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS4.addActionListener(new java.awt.event.ActionListener() {
@@ -120,7 +128,7 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
             }
         });
 
-        HeroS5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select hero", "Ana", "Ashe", "Baptiste", "Bastion", "Brigitte", "Doomfist", "Dva", "Genji", "Hanzo", "Junkrat", "Lucio", "Mei", "Mercy", "Moira", "Orisa", "Pharah", "Reaper", "Reinhardt", "Soldier76", "Sombra", "Symmetra", "Torbjörn", "Tracer", "Widowmaker", "Winston", "Wreckingball", "Zarya", "Zenyatta" }));
+        HeroS5.setModel(new javax.swing.DefaultComboBoxModel<>(heroString));
         HeroS5.setPreferredSize(new java.awt.Dimension(100, 20));
         HeroS5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -440,7 +448,30 @@ private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
         }
     }//GEN-LAST:event_saveActionPerformed
 
-
+    //read the hero file and return the string
+    private String[] heroStringRead(){
+        try{
+        FileReader heroReader = new FileReader(new File("src\\overwatchhelpertool\\hero_list.txt").getAbsolutePath());
+        BufferedReader heroFileReader = new BufferedReader(heroReader);  
+        
+        String s = heroFileReader.readLine();
+        StringTokenizer st = new StringTokenizer(s, "(,)");
+        List<String> arrList = new ArrayList<>();
+        
+        //while there is more in the string
+        while(st.hasMoreElements()){
+            arrList.add(st.nextToken());
+        }
+        String[] arr = new String[arrList.size()];
+        arr = arrList.toArray(arr);
+        return arr;
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+       return new String[] {"missing hero file"};
+    }
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Discard;
     private javax.swing.JLabel HeroPort1;

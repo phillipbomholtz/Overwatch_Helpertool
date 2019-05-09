@@ -57,17 +57,22 @@ public class TeamComp {
    public void setName(String s){
        name = s;
    }
-   
    public void setNote(String s){
        note = s;
    }
-   
+   public String getName(){
+       return name;
+   }
+   public String getNote(){
+       return note;
+   }
    public void setMapFlagTrue(String s){
        for(int i = 0; i <maps.size(); i++){
            if(maps.get(i).Name.equals(s)){
                Map temp = maps.get(i);
                temp.setMapTrue();
                maps.set(i,temp);
+               break;
            }
        }
    }
@@ -79,6 +84,7 @@ public class TeamComp {
                Map temp = maps.get(i);
                temp.setMapFalse();
                maps.set(i,temp);
+               break;
            }
        }
    }

@@ -31,13 +31,13 @@ public class CompBuilderMenuHelper {
         }
     
     //method for building , separeted files and saving to a file
-    public void compSave(String name, String hero1, String hero2, String hero3, 
-                         String hero4, String hero5, String hero6, String note){
-        
+    public void compSave(TeamComp t){
+        String name = t.getName();
+        String note = t.getNote();
         if(name != null){
         File temp = new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt");
         
-        String toWrite = hero1+","+hero2+","+hero3+","+hero4+","+hero5+","+hero6+","+note;
+        String toWrite = t.Hero1+","+t.Hero2+","+t.Hero3+","+t.Hero4+","+t.Hero5+","+t.Hero6+","+note;
 
         if(temp.exists()){
             int result = JOptionPane.showConfirmDialog(null,"File already exists! wish to overwrite?");

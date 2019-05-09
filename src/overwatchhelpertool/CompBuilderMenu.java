@@ -22,6 +22,8 @@ import java.util.ArrayList;
 public class CompBuilderMenu extends javax.swing.JPanel {
 private CompBuilderMenuHelper helper = new CompBuilderMenuHelper();
 private String[] heroString;
+private TeamComp comp = new TeamComp();
+
     /**
      * Creates new form CompBuilderMenu
      */
@@ -361,6 +363,7 @@ private String[] heroString;
 
     private void HeroS3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS3ActionPerformed
          String s = HeroS3.getSelectedItem().toString();
+         comp.Hero3 = s;
             try{
                 System.out.println("hello");
             HeroPort3.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
@@ -371,6 +374,7 @@ private String[] heroString;
 
     private void HeroS5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS5ActionPerformed
          String s = HeroS5.getSelectedItem().toString();
+         comp.Hero5 = s;
             try{
             HeroPort5.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
             }catch(Exception e){
@@ -380,6 +384,7 @@ private String[] heroString;
 
     private void HeroS4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS4ActionPerformed
         String s = HeroS4.getSelectedItem().toString();
+        comp.Hero4 = s;
             try{
             HeroPort4.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
             }catch(Exception e){
@@ -389,6 +394,7 @@ private String[] heroString;
 
     private void HeroS2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS2ActionPerformed
          String s = HeroS2.getSelectedItem().toString();
+         comp.Hero2 = s;
             try{
             HeroPort2.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
             }catch(Exception e){
@@ -398,6 +404,7 @@ private String[] heroString;
 
     private void HeroS1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS1ActionPerformed
         String s = HeroS1.getSelectedItem().toString();
+        comp.Hero1 = s;
             try{
             HeroPort1.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
             }catch(Exception e){
@@ -409,6 +416,7 @@ private String[] heroString;
 
     private void HeroS6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HeroS6ActionPerformed
          String s = HeroS6.getSelectedItem().toString();
+         comp.Hero6 = s;
             try{
             HeroPort6.setIcon(new ImageIcon(new File("src\\overwatchhelpertool\\Hero_portrait\\"+helper.imagePathGiver(s)).getAbsolutePath()));
             }catch(Exception e){
@@ -428,24 +436,10 @@ private String[] heroString;
         helper.doneSaving = false;
         while(!helper.doneSaving){
             String s = JOptionPane.showInputDialog("name this team composition");
-            helper.compSave(s, HeroS1.getSelectedItem().toString(),
-                             HeroS2.getSelectedItem().toString(),
-                             HeroS3.getSelectedItem().toString(),
-                             HeroS4.getSelectedItem().toString(),
-                             HeroS5.getSelectedItem().toString(),
-                             HeroS6.getSelectedItem().toString(),
-                             noteBox.getText());
+            comp.setName(s);
+            comp.setNote(noteBox.getText());
             
-            //load all map states into an array
-            boolean[] A = {hanamura.isSelected(),horizonLunaColony.isSelected(),
-                           paris.isSelected(),templeOfAnubis.isSelected(),
-                           volskayaIndustries.isSelected(), eichenwalde.isSelected(),
-                           hollywood.isSelected(),kingsRow.isSelected(),numbani.isSelected(),
-                           busan.isSelected(),ilios.isSelected(),lijiangTower.isSelected(),
-                           nepal.isSelected(), oasis.isSelected(), dorado.isSelected(),
-                           junkertown.isSelected(),rialto.isSelected(),route66.isSelected(),
-                           blizzardWorld.isSelected(),watchpointGibraltar.isSelected()};
-            helper.saveMaps(s, A);
+
         }
     }//GEN-LAST:event_saveActionPerformed
 

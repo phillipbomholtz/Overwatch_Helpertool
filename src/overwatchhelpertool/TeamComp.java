@@ -2,8 +2,12 @@
  * the base structure of a teamcomp
  */
 package overwatchhelpertool;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 /**
  *
@@ -27,5 +31,25 @@ public class TeamComp {
    
    public TeamComp(String compName,String Note){
        name = compName;
+       note = Note;
+   }
+   
+   private void loadMaps(){
+       String s = "";
+       
+       
+       try{
+       FileReader mapReader = new FileReader(new File("src\\overwatchhelpertool\\map_list.txt").getAbsolutePath());
+       BufferedReader mapFileReader = new BufferedReader(mapReader);
+       s = mapFileReader.readLine();
+       }catch(Exception e){
+          e.printStackTrace();
+       }
+       
+       StringTokenizer st = new StringTokenizer(s, "(,)");
+       while(st.hasMoreElements()){
+        maps.add(new Map(st.nextToken()));   
+       }
+       
    }
 } 

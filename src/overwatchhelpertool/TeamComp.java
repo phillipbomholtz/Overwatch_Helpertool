@@ -26,12 +26,13 @@ public class TeamComp {
 
    
    public TeamComp(){
-       
+       loadMaps();
    }
    
    public TeamComp(String compName,String Note){
        name = compName;
        note = Note;
+       loadMaps();
    }
    
    private void loadMaps(){
@@ -51,5 +52,13 @@ public class TeamComp {
         maps.add(new Map(st.nextToken()));   
        }
        
+   }
+   
+   public void setName(String s){
+       name = s;
+   }
+   
+   public void setNote(String s){
+       note = s;
    }
 } 

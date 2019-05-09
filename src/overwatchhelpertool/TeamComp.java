@@ -17,12 +17,12 @@ public class TeamComp {
    private String name;          //the name of the comp
    private String note;          //the entered note
    private List<Map> maps;       //a list of maps of map struct
-   private String Hero1;         //name of hero
-   private String Hero2;         //name of hero
-   private String Hero3;         //name of hero
-   private String Hero4;         //name of hero
-   private String Hero5;         //name of hero
-   private String Hero6;         //name of hero
+   protected String Hero1;         //name of hero
+   protected String Hero2;         //name of hero
+   protected String Hero3;         //name of hero
+   protected String Hero4;         //name of hero
+   protected String Hero5;         //name of hero
+   protected String Hero6;         //name of hero
 
    
    public TeamComp(){
@@ -60,5 +60,26 @@ public class TeamComp {
    
    public void setNote(String s){
        note = s;
+   }
+   
+   public void setMapFlagTrue(String s){
+       for(int i = 0; i <maps.size(); i++){
+           if(maps.get(i).Name.equals(s)){
+               Map temp = maps.get(i);
+               temp.setMapTrue();
+               maps.set(i,temp);
+           }
+       }
+   }
+   
+   
+   public void setMapFlagFalse(String s){
+       for(int i = 0; i <maps.size(); i++){
+           if(maps.get(i).Name.equals(s)){
+               Map temp = maps.get(i);
+               temp.setMapFalse();
+               maps.set(i,temp);
+           }
+       }
    }
 } 

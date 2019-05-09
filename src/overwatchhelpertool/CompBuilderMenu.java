@@ -439,7 +439,6 @@ private TeamComp comp = new TeamComp();
             comp.setName(s);
             comp.setNote(noteBox.getText());
             
-
         }
     }//GEN-LAST:event_saveActionPerformed
 

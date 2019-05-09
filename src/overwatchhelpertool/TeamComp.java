@@ -17,7 +17,7 @@ import java.io.IOException;
 public class TeamComp {
    private String name;          //the name of the comp
    private String note;          //the entered note
-   private List<Map> maps;       //a list of maps of map struct
+   private List<Map> maps = new ArrayList<>();       //a list of maps of map struct
    protected String Hero1;         //name of hero
    protected String Hero2;         //name of hero
    protected String Hero3;         //name of hero
@@ -49,7 +49,9 @@ public class TeamComp {
        
        StringTokenizer st = new StringTokenizer(s, "(,)");
        while(st.hasMoreElements()){
-        maps.add(new Map(st.nextToken()));  
+        Map temp = new Map(st.nextToken());
+        System.out.println(temp.Name);
+        maps.add(temp);  
        }
        
    }

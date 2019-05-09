@@ -57,10 +57,6 @@ public class CompBuilderMenuHelper {
     
     }
     
-    public void saveMaps(String name, boolean[] maps){
-        StringBuilder toWrite = new StringBuilder();
-      
-    }
     //the actual writing part of the saver
     private void compSaveWrite(String name, String s){
          try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
@@ -70,4 +66,5 @@ public class CompBuilderMenuHelper {
            e.printStackTrace();
        }
     }
+    
 }

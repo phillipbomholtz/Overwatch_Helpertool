@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.io.IOException;
 
 /**
  *
@@ -38,18 +39,17 @@ public class TeamComp {
    private void loadMaps(){
        String s = "";
        
-       
        try{
        FileReader mapReader = new FileReader(new File("src\\overwatchhelpertool\\map_list.txt").getAbsolutePath());
        BufferedReader mapFileReader = new BufferedReader(mapReader);
        s = mapFileReader.readLine();
-       }catch(Exception e){
+       }catch(IOException e){
           e.printStackTrace();
        }
        
        StringTokenizer st = new StringTokenizer(s, "(,)");
        while(st.hasMoreElements()){
-        maps.add(new Map(st.nextToken()));   
+        maps.add(new Map(st.nextToken()));  
        }
        
    }

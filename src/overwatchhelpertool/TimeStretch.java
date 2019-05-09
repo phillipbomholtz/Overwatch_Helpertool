@@ -14,8 +14,8 @@ public class TimeStretch {
         private int endSecond;
         
         public TimeStretch(int start, int end){
-            this.startSecond = start;
-            this.endSecond = end;
+            startSecond = start;
+            endSecond = end;
         }
         
         //gives the start second if needed

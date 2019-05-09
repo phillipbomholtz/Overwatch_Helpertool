@@ -14,7 +14,7 @@ public class Map {
     protected boolean enableFlag = false;
     
     public Map(String name){
-        this.Name = name;
+        Name = name;
     }
     
     public void setMapTrue(){

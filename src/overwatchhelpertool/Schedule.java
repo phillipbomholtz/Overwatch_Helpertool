@@ -10,7 +10,6 @@ import java.util.ArrayList;
  */
 public class Schedule {
     private List<Day> days;
-    private int amountOfDays = 0;
     
     public Schedule(){
         this.days  = new ArrayList<>();
@@ -19,7 +18,6 @@ public class Schedule {
     //add a day to the schedule
     public void addDay(Day day){
         days.add(day);
-        amountOfDays++;
     }
     
     //return a given day
@@ -28,6 +26,6 @@ public class Schedule {
     }
     
     public int giveDayAmount(){
-        return amountOfDays;
+        return days.size();
     }
 }

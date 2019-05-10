@@ -10,7 +10,7 @@ import java.util.ArrayList;
  */
 public class Day {
     public String name;
-    private List<TimeStretch> timeStreches;  //an array of streches
+    protected List<TimeStretch> timeStreches;  //an array of streches
     
     public Day(String name){
         name = name;

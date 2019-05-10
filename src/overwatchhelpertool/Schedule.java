@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author Phillip Bomholtz
  */
 public class Schedule {
-    private List<Day> days;
+    protected List<Day> days;
     
     public Schedule(){
         this.days  = new ArrayList<>();

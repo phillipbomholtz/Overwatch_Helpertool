@@ -13,7 +13,7 @@ public class Day {
     protected List<TimeStretch> timeStreches;  //an array of streches
     
     public Day(String name){
-        name = name;
+        this.name = name;
         this.timeStreches  = new ArrayList<>();
     }
     

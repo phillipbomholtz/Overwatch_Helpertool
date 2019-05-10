@@ -49,8 +49,8 @@ public class justATest {
         Schedule expResult = testSchedule;
         Schedule result = instance.buildSchedule();
         
-        System.out.println(result.giveDayAtIndex(0).name+ " " + result.giveDayAtIndex(1).name);
-        System.out.println(expResult.giveDayAtIndex(0).name + " " + expResult.giveDayAtIndex(1).name);
+        System.out.println(result.giveDayAtIndex(1).name+ " " + result.giveDayAtIndex(1).name);
+        System.out.println(expResult.giveDayAtIndex(1).name + " " + expResult.giveDayAtIndex(1).name);
         System.out.println(expResult.equals(result));
     }
     

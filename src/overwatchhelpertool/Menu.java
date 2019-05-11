@@ -28,13 +28,13 @@ public class Menu extends javax.swing.JPanel {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        playerMenu1 = new overwatchhelpertool.PlayerMenu();
         playerLogin1 = new overwatchhelpertool.PlayerLogin();
+        playerMenu1 = new overwatchhelpertool.PlayerMenu();
 
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        jTabbedPane1.addTab("tab1", playerMenu1);
         jTabbedPane1.addTab("tab2", playerLogin1);
+        jTabbedPane1.addTab("tab1", playerMenu1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

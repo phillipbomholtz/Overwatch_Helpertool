@@ -133,7 +133,7 @@ public class PlayerLogin extends javax.swing.JPanel {
 
     private void loginBotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBotMouseClicked
         System.out.println("hello programmer");
-        String searchstring = "";
+        String searchstring;
         try{
          FileReader userReader = new FileReader(new File("src\\overwatchhelpertool\\user_login.txt").getAbsolutePath());
          BufferedReader userFileReader = new BufferedReader(userReader);  

@@ -5,6 +5,10 @@
  */
 package overwatchhelpertool;
 import java.io.File;
+import java.io.FileReader;        //needed for reading file
+import java.io.BufferedReader;
+import java.util.StringTokenizer;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Phillip
@@ -129,6 +133,30 @@ public class PlayerLogin extends javax.swing.JPanel {
 
     private void loginBotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBotMouseClicked
         System.out.println("hello programmer");
+        String searchstring = "";
+        try{
+         FileReader userReader = new FileReader(new File("src\\overwatchhelpertool\\user_login.txt").getAbsolutePath());
+         BufferedReader userFileReader = new BufferedReader(userReader);  
+         String tempUser;                                                          //temp. stored user
+         String tempPass;                                                          //temp stored password
+          searchstring = userFileReader.readLine();                                         //read to searchstring
+      while(searchstring != null){                                              //so long file is not empty
+          StringTokenizer tok = new StringTokenizer(searchstring,"(,)");        //tokenizer for reading "," seperated file
+          tempUser = tok.nextToken();                                           //load in user
+          tempPass = tok.nextToken();                                           //load in password
+          if(tempUser.equals(username.getText())){
+           if(tempPass.equals(password.getText())){
+               JOptionPane.showMessageDialog(null,"Login succesful! welcome "+username.getText());
+               break;
+           }
+       }
+         searchstring = userFileReader.readLine();                                      //read new line
+      }
+         JOptionPane.showMessageDialog(null,"Incorrect login");
+         
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_loginBotMouseClicked
 
 

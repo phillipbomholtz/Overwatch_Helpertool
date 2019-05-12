@@ -5,12 +5,13 @@
  */
 package overwatchhelpertool;
 import java.io.File;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Phillip
  */
 public class Menu extends javax.swing.JPanel {
-
+        private Player user;
     /**
      * Creates new form Menu
      */
@@ -33,6 +34,16 @@ public class Menu extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
+        playerLogin1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                playerLogin1MouseReleased(evt);
+            }
+        });
+        playerLogin1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                playerLogin1PropertyChange(evt);
+            }
+        });
         jTabbedPane1.addTab("tab2", playerLogin1);
         jTabbedPane1.addTab("tab1", playerMenu1);
 
@@ -47,6 +58,21 @@ public class Menu extends javax.swing.JPanel {
             .addComponent(jTabbedPane1)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void playerLogin1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playerLogin1MouseReleased
+        if(playerLogin1.loginStatus){
+            System.out.print("hello");
+            jTabbedPane1.setSelectedIndex(1);
+                           JOptionPane.showMessageDialog(null,"Login succesfull! welcome "+username.getText());  //message on succesfull login
+        }
+    }//GEN-LAST:event_playerLogin1MouseReleased
+
+    private void playerLogin1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_playerLogin1PropertyChange
+         if(playerLogin1.loginStatus){
+            System.out.print("hello");
+            jTabbedPane1.setSelectedIndex(1);
+        }
+    }//GEN-LAST:event_playerLogin1PropertyChange
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

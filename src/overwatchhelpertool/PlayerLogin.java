@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
  * @author Phillip
  */
 public class PlayerLogin extends javax.swing.JPanel {
-
+    public boolean loginStatus = false;
+    private Player user;
     /**
      * Creates new form PlayerLogin
      */
@@ -134,18 +135,23 @@ public class PlayerLogin extends javax.swing.JPanel {
          FileReader userReader = new FileReader(new File("src\\overwatchhelpertool\\user_login.txt").getAbsolutePath());
          BufferedReader userFileReader = new BufferedReader(userReader);  
           searchstring = userFileReader.readLine();                             //read to searchstring
-      while(searchstring != null){                                              //so long file is not empty
+          
+        while(searchstring != null){                                              //so long file is not empty
+          
           StringTokenizer tok = new StringTokenizer(searchstring,"(,)");        //tokenizer for reading "," seperated file
           tempUser = tok.nextToken();                                           //load in user
           tempPass = tok.nextToken();                                           //load in password
+          
           if(tempUser.equals(username.getText())){
            if(tempPass.equals(password.getText())){
-               JOptionPane.showMessageDialog(null,"Login succesful! welcome "+username.getText());
+               loginStatus = true;
+               this.user = new Player(tempUser,tempPass);
                break;
            }
        }
          searchstring = userFileReader.readLine();                                      //read new line
       }
+      //check if login was incorrect
       if(!tempUser.equals(username.getText()) || !tempPass.equals(password.getText())){
          JOptionPane.showMessageDialog(null,"Incorrect login");
       }

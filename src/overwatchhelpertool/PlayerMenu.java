@@ -11,6 +11,7 @@ import java.io.File;
  */
 public class PlayerMenu extends javax.swing.JPanel {
 
+    private Player user;
     /**
      * Creates new form PlayerMenu
      */
@@ -28,7 +29,7 @@ public class PlayerMenu extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        welcomeText = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 500));
@@ -38,8 +39,8 @@ public class PlayerMenu extends javax.swing.JPanel {
         jLabel1.setMaximumSize(new java.awt.Dimension(500, 450));
         jLabel1.setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel2.setText("jLabel2");
+        welcomeText.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        welcomeText.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -48,17 +49,17 @@ public class PlayerMenu extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(welcomeText)
                 .addGap(0, 342, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jLabel2)
+                .addComponent(welcomeText)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -66,6 +67,6 @@ public class PlayerMenu extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel welcomeText;
     // End of variables declaration//GEN-END:variables
 }

@@ -18,4 +18,8 @@ public class Player {
         this.username = user;
         this.password = pass;
     }
+    
+    public String giveName(){
+        return username;
+    }
 }

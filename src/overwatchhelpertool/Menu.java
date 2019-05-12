@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Phillip
  */
 public class Menu extends javax.swing.JPanel {
-        private Player user;
+        private Player player;
     /**
      * Creates new form Menu
      */
@@ -58,10 +58,10 @@ public class Menu extends javax.swing.JPanel {
             playerLogin1.loginCheck();                                        //check if login was correct
             if(playerLogin1.loginStatus){
             jTabbedPane1.setSelectedIndex(1);                                 //change to player menu
-            JOptionPane.showMessageDialog(null,"Login succesfull! welcome");  //message on succesfull login
-        }
-        }
-        });
+            player = playerLogin1.givePlayer();
+            JOptionPane.showMessageDialog(null,"Login succesfull! welcome "+player.giveName());  //message on succesfull login
+            
+        }}});
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -171,5 +171,9 @@ protected void loginCheck(){
         }
 }
 
+protected Player givePlayer(){
+    return user;
+}
+
   
 }

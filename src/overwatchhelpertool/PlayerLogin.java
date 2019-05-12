@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package overwatchhelpertool;
 import java.io.File;
 import java.io.FileReader;        //needed for reading file
@@ -132,14 +127,13 @@ public class PlayerLogin extends javax.swing.JPanel {
     }//GEN-LAST:event_passwordMouseClicked
 
     private void loginBotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBotMouseClicked
-        System.out.println("hello programmer");
-        String searchstring;
+         String searchstring;                                                            //string read to
+          String tempUser = "";                                                          //temp. stored user
+          String tempPass = "";                                                          //temp stored password
         try{
          FileReader userReader = new FileReader(new File("src\\overwatchhelpertool\\user_login.txt").getAbsolutePath());
          BufferedReader userFileReader = new BufferedReader(userReader);  
-         String tempUser;                                                          //temp. stored user
-         String tempPass;                                                          //temp stored password
-          searchstring = userFileReader.readLine();                                         //read to searchstring
+          searchstring = userFileReader.readLine();                             //read to searchstring
       while(searchstring != null){                                              //so long file is not empty
           StringTokenizer tok = new StringTokenizer(searchstring,"(,)");        //tokenizer for reading "," seperated file
           tempUser = tok.nextToken();                                           //load in user
@@ -152,8 +146,9 @@ public class PlayerLogin extends javax.swing.JPanel {
        }
          searchstring = userFileReader.readLine();                                      //read new line
       }
+      if(!tempUser.equals(username.getText()) || !tempPass.equals(password.getText())){
          JOptionPane.showMessageDialog(null,"Incorrect login");
-         
+      }
         }catch(Exception e){
             e.printStackTrace();
         }

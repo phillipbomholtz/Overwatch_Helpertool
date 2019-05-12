@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package overwatchhelpertool;
+import java.awt.event.*;
 import java.io.File;
 import javax.swing.JOptionPane;
 /**
@@ -17,6 +18,7 @@ public class Menu extends javax.swing.JPanel {
      */
     public Menu() {
         initComponents();
+        createActionListeners();
     }
 
     /**
@@ -34,16 +36,6 @@ public class Menu extends javax.swing.JPanel {
 
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        playerLogin1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseReleased(java.awt.event.MouseEvent evt) {
-                playerLogin1MouseReleased(evt);
-            }
-        });
-        playerLogin1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                playerLogin1PropertyChange(evt);
-            }
-        });
         jTabbedPane1.addTab("tab2", playerLogin1);
         jTabbedPane1.addTab("tab1", playerMenu1);
 
@@ -59,21 +51,18 @@ public class Menu extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void playerLogin1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_playerLogin1MouseReleased
-        if(playerLogin1.loginStatus){
-            System.out.print("hello");
-            jTabbedPane1.setSelectedIndex(1);
-                           JOptionPane.showMessageDialog(null,"Login succesfull! welcome "+username.getText());  //message on succesfull login
+    private void createActionListeners(){
+        //create a action listener for when botten is clicked
+        playerLogin1.loginBot.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            playerLogin1.loginCheck();                                        //check if login was correct
+            if(playerLogin1.loginStatus){
+            jTabbedPane1.setSelectedIndex(1);                                 //change to player menu
+            JOptionPane.showMessageDialog(null,"Login succesfull! welcome");  //message on succesfull login
         }
-    }//GEN-LAST:event_playerLogin1MouseReleased
-
-    private void playerLogin1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_playerLogin1PropertyChange
-         if(playerLogin1.loginStatus){
-            System.out.print("hello");
-            jTabbedPane1.setSelectedIndex(1);
         }
-    }//GEN-LAST:event_playerLogin1PropertyChange
-
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane jTabbedPane1;

@@ -1,4 +1,6 @@
 package overwatchhelpertool;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.FileReader;        //needed for reading file
 import java.io.BufferedReader;
@@ -55,7 +57,7 @@ public class PlayerLogin extends javax.swing.JPanel {
             }
         });
 
-        password.setText("jPasswordField2");
+        password.setText("Password");
         password.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 passwordMouseClicked(evt);
@@ -70,11 +72,6 @@ public class PlayerLogin extends javax.swing.JPanel {
         jLabel4.setText("Password");
 
         loginBot.setText("Login");
-        loginBot.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginBotMouseClicked(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -84,13 +81,13 @@ public class PlayerLogin extends javax.swing.JPanel {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(loginBot)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2)
-                    .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
                     .addComponent(jLabel4)
-                    .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(password))
                 .addGap(372, 372, 372))
         );
         layout.setVerticalGroup(
@@ -120,15 +117,28 @@ public class PlayerLogin extends javax.swing.JPanel {
     }//GEN-LAST:event_usernameActionPerformed
 
     private void usernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usernameMouseClicked
-        username.setText("");
+        if(username.getText().equals("Username")){username.setText("");}
+        
     }//GEN-LAST:event_usernameMouseClicked
 
     private void passwordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passwordMouseClicked
-        password.setText("");
+        if(password.getText().equals("Password")){password.setText("");}
     }//GEN-LAST:event_passwordMouseClicked
 
-    private void loginBotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginBotMouseClicked
-         String searchstring;                                                            //string read to
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    protected javax.swing.JButton loginBot;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField username;
+    // End of variables declaration//GEN-END:variables
+
+//check login
+protected void loginCheck(){
+     String searchstring;                                                                //string read to
           String tempUser = "";                                                          //temp. stored user
           String tempPass = "";                                                          //temp stored password
         try{
@@ -136,7 +146,7 @@ public class PlayerLogin extends javax.swing.JPanel {
          BufferedReader userFileReader = new BufferedReader(userReader);  
           searchstring = userFileReader.readLine();                             //read to searchstring
           
-        while(searchstring != null){                                              //so long file is not empty
+        while(searchstring != null){                                            //so long file is not empty
           
           StringTokenizer tok = new StringTokenizer(searchstring,"(,)");        //tokenizer for reading "," seperated file
           tempUser = tok.nextToken();                                           //load in user
@@ -145,12 +155,13 @@ public class PlayerLogin extends javax.swing.JPanel {
           if(tempUser.equals(username.getText())){
            if(tempPass.equals(password.getText())){
                loginStatus = true;
-               this.user = new Player(tempUser,tempPass);
+               this.user = new Player(tempUser,tempPass);                       //make a player 
                break;
            }
        }
-         searchstring = userFileReader.readLine();                                      //read new line
+         searchstring = userFileReader.readLine();                              //read new line
       }
+        
       //check if login was incorrect
       if(!tempUser.equals(username.getText()) || !tempPass.equals(password.getText())){
          JOptionPane.showMessageDialog(null,"Incorrect login");
@@ -158,16 +169,7 @@ public class PlayerLogin extends javax.swing.JPanel {
         }catch(Exception e){
             e.printStackTrace();
         }
-    }//GEN-LAST:event_loginBotMouseClicked
+}
 
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JButton loginBot;
-    private javax.swing.JPasswordField password;
-    private javax.swing.JTextField username;
-    // End of variables declaration//GEN-END:variables
+  
 }

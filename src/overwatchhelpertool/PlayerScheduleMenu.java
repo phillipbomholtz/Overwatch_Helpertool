@@ -35,6 +35,8 @@ public class PlayerScheduleMenu extends javax.swing.JPanel {
         jRadioButton4 = new javax.swing.JRadioButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         playerScheduleMenuMonday1 = new overwatchhelpertool.PlayerScheduleMenuMonday();
+        playerScheduleMenuTuesday1 = new overwatchhelpertool.PlayerScheduleMenuTuesday();
+        playerScheduleMenuWednesday1 = new overwatchhelpertool.PlayerScheduleMenuWednesday();
 
         jRadioButton4.setText("jRadioButton1");
 
@@ -43,6 +45,8 @@ public class PlayerScheduleMenu extends javax.swing.JPanel {
         jTabbedPane1.setBackground(new java.awt.Color(204, 204, 204));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(1000, 500));
         jTabbedPane1.addTab("tab2", playerScheduleMenuMonday1);
+        jTabbedPane1.addTab("tab2", playerScheduleMenuTuesday1);
+        jTabbedPane1.addTab("tab3", playerScheduleMenuWednesday1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -61,5 +65,7 @@ public class PlayerScheduleMenu extends javax.swing.JPanel {
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private overwatchhelpertool.PlayerScheduleMenuMonday playerScheduleMenuMonday1;
+    private overwatchhelpertool.PlayerScheduleMenuTuesday playerScheduleMenuTuesday1;
+    private overwatchhelpertool.PlayerScheduleMenuWednesday playerScheduleMenuWednesday1;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,8 +35,8 @@ public class PlayerSchedulerTest {
         TimeStretch test4 = new TimeStretch(6,7);
         
         //make two days from stretches
-        Day testDay1 = new Day("day1");
-        Day testDay2 = new Day("day2");
+        Day testDay1 = new Day("Monday");
+        Day testDay2 = new Day("Tuesday");
         
         testDay1.addStrech(test1);
         testDay1.addStrech(test2);
@@ -57,7 +57,14 @@ public class PlayerSchedulerTest {
         PlayerScheduler instance = new PlayerScheduler(testArr,2);
         Schedule expResult = testSchedule;
         Schedule result = instance.buildSchedule();
-        assertTrue(expResult.days.equals(result.days));
+        
+        //check if names are the same
+        assertTrue(expResult.days.get(0).name.equals(result.days.get(0).name));
+        assertTrue(expResult.days.get(1).name.equals(result.days.get(1).name));
+        
+        //check if the timestretches are the same
+        assertTrue(expResult.days.get(0).timeStreches.equals(result.days.get(0).timeStreches));
+        assertTrue(expResult.days.get(1).timeStreches.equals(result.days.get(1).timeStreches));
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }

@@ -75,7 +75,7 @@ public class PlayerScheduleMenuSunday extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(1000, 472));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setText("Tuesday");
+        jLabel7.setText("Sunday");
 
         jLabel5.setText("Here are the start and stop time");
 

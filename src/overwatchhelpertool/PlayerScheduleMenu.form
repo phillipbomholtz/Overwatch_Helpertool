@@ -53,8 +53,8 @@
         <Component class="overwatchhelpertool.PlayerScheduleMenuMonday" name="playerScheduleMenuMonday1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="tab2">
-                <Property name="tabTitle" type="java.lang.String" value="tab2"/>
+              <JTabbedPaneConstraints tabName="Monday">
+                <Property name="tabTitle" type="java.lang.String" value="Monday"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -62,8 +62,8 @@
         <Component class="overwatchhelpertool.PlayerScheduleMenuTuesday" name="playerScheduleMenuTuesday1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="tab2">
-                <Property name="tabTitle" type="java.lang.String" value="tab2"/>
+              <JTabbedPaneConstraints tabName="Tuesday">
+                <Property name="tabTitle" type="java.lang.String" value="Tuesday"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -71,8 +71,59 @@
         <Component class="overwatchhelpertool.PlayerScheduleMenuWednesday" name="playerScheduleMenuWednesday1">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="tab3">
-                <Property name="tabTitle" type="java.lang.String" value="tab3"/>
+              <JTabbedPaneConstraints tabName="Wednesday">
+                <Property name="tabTitle" type="java.lang.String" value="Wednesday"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="overwatchhelpertool.PlayerScheduleMenuThursday" name="playerScheduleMenuThursday1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Thursday">
+                <Property name="tabTitle" type="java.lang.String" value="Thursday"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="overwatchhelpertool.PlayerScheduleMenuFriday" name="playerScheduleMenuFriday1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Friday">
+                <Property name="tabTitle" type="java.lang.String" value="Friday"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="overwatchhelpertool.PlayerScheduleMenuSaturday" name="playerScheduleMenuSaturday1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Saturday">
+                <Property name="tabTitle" type="java.lang.String" value="Saturday"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="overwatchhelpertool.PlayerScheduleMenuSunday" name="playerScheduleMenuSunday1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="Sunday">
+                <Property name="tabTitle" type="java.lang.String" value="Sunday"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JButton" name="finishBotten">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Click anywhere to finalize"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="finishBottenMouseClicked"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="tab8">
+                <Property name="tabTitle" type="java.lang.String" value="tab8"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>

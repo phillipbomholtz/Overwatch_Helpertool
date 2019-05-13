@@ -32,12 +32,10 @@ public class Menu extends javax.swing.JPanel {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         playerLogin1 = new overwatchhelpertool.PlayerLogin();
-        playerMenu1 = new overwatchhelpertool.PlayerMenu();
 
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
         jTabbedPane1.addTab("tab2", playerLogin1);
-        jTabbedPane1.addTab("tab1", playerMenu1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -67,6 +65,5 @@ public class Menu extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane jTabbedPane1;
     private overwatchhelpertool.PlayerLogin playerLogin1;
-    private overwatchhelpertool.PlayerMenu playerMenu1;
     // End of variables declaration//GEN-END:variables
 }

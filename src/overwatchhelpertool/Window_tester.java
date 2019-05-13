@@ -20,7 +20,7 @@ public class Window_tester {
      */
     public static void main(String[] args) {
         JFrame vindue = new JFrame( "BUILD THAT WALL" ); 
-        vindue.add( new Menu());
+        vindue.add(new PlayerScheduleMenu());
         vindue.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
         vindue.pack();
         vindue.setVisible(true);

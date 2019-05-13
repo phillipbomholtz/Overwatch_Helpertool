@@ -28,4 +28,14 @@ public class Schedule {
     public int giveDayAmount(){
         return days.size();
     }
+    
+    //method for taking individual timestreches and pumping them into a day to 
+    //be used elsewere.
+    public Day buildDay(List <TimeStretch> arr, int size,String name){
+        Day newDay = new Day(name);
+        for(int i = 0; i < size;i++){
+            newDay.addStretch(arr.get(i));
+        }
+        return newDay;
+    }
 }

@@ -17,7 +17,7 @@ public class Day {
         this.timeStreches  = new ArrayList<>();
     }
     
-    public void addStrech(TimeStretch strech){
-        timeStreches.add(strech);
+    public void addStretch(TimeStretch stretch){
+        timeStreches.add(stretch);
     }
 }

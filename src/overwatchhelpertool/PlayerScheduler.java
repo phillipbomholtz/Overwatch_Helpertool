@@ -10,29 +10,26 @@ import java.util.ArrayList;
  */
 public class PlayerScheduler {
     
-    private TimeStretch[][] week;  //an array of arrays of all timestreches in unorganized fashion
-    private int weeklength;        //length of the week (should be 7 but you never know)
+    private ArrayList<ArrayList<TimeStretch>> week = new ArrayList<ArrayList<TimeStretch>>();  //an array of arrays of all timestreches in unorganized fashion
     
-    public PlayerScheduler(TimeStretch[][] arr,int x){
-        weeklength = x;
-        this.week = new TimeStretch[x][];
-        week = arr;                         //initialize with call array
+    public PlayerScheduler(ArrayList<ArrayList<TimeStretch>> weekIn){
+        this.week = weekIn;
     }
     
     
     
     public Schedule buildSchedule(){
-        Day[] weekdays = new Day[weeklength];       //an array of the days of the week
+        Day[] weekdays = new Day[week.size()];       //an array of the days of the week
         List <TimeStretch> tempArr = new ArrayList<>(); //a temp array to hold timestrech values
 
-        for(int i = 0; i < weeklength; i++){                                     //loop through days
-            for(int u = 0; u < week[i].length;u++){                              //loop through timestreches   
-                tempArr.add(week[i][u]);                                         //load in timestrech
+        for(int i = 0; i < week.size(); i++){                                     //loop through days
+            for(int u = 0; u < week.get(i).size();u++){                              //loop through timestreches   
+                tempArr.add(week.get(i).get(u));                                         //load in timestrech
             }
-            weekdays[i] = buildDay(tempArr,week[i].length,giveDayName(i));       //build a day of the timestrech just read
+            weekdays[i] = buildDay(tempArr,week.get(i).size(),giveDayName(i));       //build a day of the timestrech just read
             tempArr.clear();
         }
-        return finishSchedule(weekdays,weeklength);                              //return a build schedule
+        return finishSchedule(weekdays,week.size());                              //return a build schedule
     }
     
     
@@ -42,7 +39,7 @@ public class PlayerScheduler {
     private Day buildDay(List <TimeStretch> arr, int size,String name){
         Day newDay = new Day(name);
         for(int i = 0; i < size;i++){
-            newDay.addStrech(arr.get(i));
+            newDay.addStretch(arr.get(i));
         }
         return newDay;
     }

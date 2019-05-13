@@ -15,7 +15,7 @@ public class justATest {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //make some stretches
+        /*make some stretches
         System.out.println();
         TimeStretch test1 = new TimeStretch(1,2);
         TimeStretch test2 = new TimeStretch(3,4);
@@ -27,10 +27,10 @@ public class justATest {
         Day testDay1 = new Day("Monday");
         Day testDay2 = new Day("Tuesday");
         
-        testDay1.addStrech(test1);
-        testDay1.addStrech(test2);
-        testDay2.addStrech(test3);
-        testDay2.addStrech(test4);
+        testDay1.addStretch(test1);
+        testDay1.addStretch(test2);
+        testDay2.addStretch(test3);
+        testDay2.addStretch(test4);
         System.out.println("days");
         
         //make Schedule from days
@@ -51,7 +51,7 @@ public class justATest {
         
         System.out.println(result.giveDayAtIndex(1).name+ " " + result.giveDayAtIndex(1).name);
         System.out.println(expResult.giveDayAtIndex(1).name + " " + expResult.giveDayAtIndex(1).name);
-        System.out.println(expResult.equals(result));
+        System.out.println(expResult.equals(result));*/
     }
     
 }

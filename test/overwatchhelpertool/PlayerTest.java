@@ -17,19 +17,32 @@ import static org.junit.Assert.*;
  *
  * @author Phillip
  */
-public class PlayerSchedulerTest {
+public class PlayerTest {
     
-    public PlayerSchedulerTest() {
+    public PlayerTest() {
     }
 
     /**
-     * Test of buildSchedule method, of class PlayerScheduler.
-     * manually assemble a schedule and see if method does the same
+     * Test of giveName method, of class Player.
+     */
+    @Test
+    public void testGiveName() {
+        System.out.println("giveName");
+        Player instance = new Player("punky","");
+        String expResult = "punky";
+        String result = instance.giveName();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of buildSchedule method, of class Player.
      */
     @Test
     public void testBuildSchedule() {
         System.out.println("buildSchedule");
-        //make some stretches
+         //make some stretches
         TimeStretch test1 = new TimeStretch(1,2);
         TimeStretch test2 = new TimeStretch(2,3);
         TimeStretch test3 = new TimeStretch(4,5);
@@ -58,11 +71,13 @@ public class PlayerSchedulerTest {
         testArr1d2.add(test3); testArr1d2.add(test4);
         week.add(testArr1d1);week.add(testArr1d2);
         
-        PlayerScheduler instance = new PlayerScheduler(week);
-        Schedule expResult = testSchedule;
-        Schedule result = instance.buildSchedule();
+        ArrayList<ArrayList<TimeStretch>> weekIn = week;
+        Player instance = new Player("punky","");
+        instance.buildSchedule(weekIn);
         
-        //check if names are the same
+        Schedule expResult = testSchedule;
+        Schedule result = instance.giveSchedule();
+        
         assertTrue(expResult.days.get(0).name.equals(result.days.get(0).name));
         assertTrue(expResult.days.get(1).name.equals(result.days.get(1).name));
         

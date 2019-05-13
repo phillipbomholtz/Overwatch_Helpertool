@@ -64,7 +64,7 @@ public class PlayerScheduleMenu extends javax.swing.JPanel {
                 finishBottenMouseClicked(evt);
             }
         });
-        jTabbedPane1.addTab("tab8", finishBotten);
+        jTabbedPane1.addTab("Finalize", finishBotten);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

@@ -32,10 +32,14 @@ public class Menu extends javax.swing.JPanel {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         playerLogin1 = new overwatchhelpertool.PlayerLogin();
+        playerMenu1 = new overwatchhelpertool.PlayerMenu();
+        playerScheduleMenu1 = new overwatchhelpertool.PlayerScheduleMenu();
 
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
         jTabbedPane1.addTab("tab2", playerLogin1);
+        jTabbedPane1.addTab("tab2", playerMenu1);
+        jTabbedPane1.addTab("tab3", playerScheduleMenu1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -50,7 +54,7 @@ public class Menu extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void createActionListeners(){
-        //create a action listener for when botten is clicked
+        //create a action listener for login botted on login menu
         playerLogin1.loginBot.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
             playerLogin1.loginCheck();                                        //check if login was correct
@@ -60,10 +64,18 @@ public class Menu extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null,"Login succesfull! welcome "+player.giveName());  //message on succesfull login
             
         }}});
+        
+        //for create schedule botten on player menu
+        playerMenu1.scheduleCreate.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            jTabbedPane1.setSelectedIndex(2);                                  //change to schedule creating window
+        }});
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane jTabbedPane1;
     private overwatchhelpertool.PlayerLogin playerLogin1;
+    private overwatchhelpertool.PlayerMenu playerMenu1;
+    private overwatchhelpertool.PlayerScheduleMenu playerScheduleMenu1;
     // End of variables declaration//GEN-END:variables
 }

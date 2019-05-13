@@ -335,9 +335,9 @@ public class PlayerScheduleMenuThursday extends javax.swing.JPanel {
     
     //get the string with the time value in hh:mm format
     private String getValueString(String value){
-        StringTokenizer reader = new StringTokenizer(value,"( )");
-        reader.nextToken();reader.nextToken();reader.nextToken();
-        return reader.nextToken();
+        StringTokenizer reader = new StringTokenizer(value,"( )");   
+        reader.nextToken();reader.nextToken();reader.nextToken();    //read and discard junk
+        return reader.nextToken();                                   //get wanted ino
     }
     
     private int getInSeconds(int hour,int min){

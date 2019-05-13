@@ -5,8 +5,12 @@
  */
 package overwatchhelpertool;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
+import java.util.StringTokenizer;
+import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerDateModel;
 
@@ -221,7 +225,125 @@ public class PlayerScheduleMenuSunday extends javax.swing.JPanel {
         );
     }// </editor-fold>                        
 
+    public List<TimeStretch> GiveTimeStreches(){
+        List<TimeStretch> tempList = new ArrayList<>();
+        
+        //for first stretch
+        if(stretchOneSundaySelect.isSelected()){
+            //get hours an minuts of start
+            String startTime=getValueString(TimeSpinSunday1.getValue().toString());
+            StringTokenizer startReader = new StringTokenizer(startTime,"(:)");
+            int startHour = Integer.parseInt(startReader.nextToken());
+            int startMminut = Integer.parseInt(startReader.nextToken());
+            
+            
+            //get hours an minuts of end
+            String endTime = getValueString(TimeSpinSunday2.getValue().toString());
+            StringTokenizer endReader = new StringTokenizer(endTime,"(:)");
+            int endHour = Integer.parseInt(endReader.nextToken());
+            int endMinute = Integer.parseInt(endReader.nextToken());
+
+            int startInSeconds = getInSeconds(startHour,startMminut);
+            int endInSeconds = getInSeconds(endHour,endMinute);
+            
+            //collect and put in a timestretch and save to list if start is smaller than end
+            if(startInSeconds < endInSeconds){
+                tempList.add(new TimeStretch(startInSeconds,endInSeconds));
+            }else{
+                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+            }
+        }
+        
+        //for seconds stretch
+        if(stretchTwoSundaySelect.isSelected()){
+            //get hours an minuts of start
+            String startTime=getValueString(TimeSpinSunday3.getValue().toString());
+            StringTokenizer startReader = new StringTokenizer(startTime,"(:)");
+            int startHour = Integer.parseInt(startReader.nextToken());
+            int startMminut = Integer.parseInt(startReader.nextToken());
+            
+            
+            //get hours an minuts of end
+            String endTime = getValueString(TimeSpinSunday4.getValue().toString());
+            StringTokenizer endReader = new StringTokenizer(endTime,"(:)");
+            int endHour = Integer.parseInt(endReader.nextToken());
+            int endMinute = Integer.parseInt(endReader.nextToken());
+
+            int startInSeconds = getInSeconds(startHour,startMminut);
+            int endInSeconds = getInSeconds(endHour,endMinute);
+            
+            //collect and put in a timestretch and save to list if start is smaller than end
+            if(startInSeconds < endInSeconds){
+                tempList.add(new TimeStretch(startInSeconds,endInSeconds));
+            }else{
+                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+            }
+        }
+        
+        //for third stretch
+        if(stretchThreeSundaySelect.isSelected()){
+            //get hours an minuts of start
+            String startTime=getValueString(TimeSpinSunday5.getValue().toString());
+            StringTokenizer startReader = new StringTokenizer(startTime,"(:)");
+            int startHour = Integer.parseInt(startReader.nextToken());
+            int startMminut = Integer.parseInt(startReader.nextToken());
+            
+            
+            //get hours an minuts of end
+            String endTime = getValueString(TimeSpinSunday6.getValue().toString());
+            StringTokenizer endReader = new StringTokenizer(endTime,"(:)");
+            int endHour = Integer.parseInt(endReader.nextToken());
+            int endMinute = Integer.parseInt(endReader.nextToken());
+
+            int startInSeconds = getInSeconds(startHour,startMminut);
+            int endInSeconds = getInSeconds(endHour,endMinute);
+            
+            //collect and put in a timestretch and save to list if start is smaller than end
+            if(startInSeconds < endInSeconds){
+                tempList.add(new TimeStretch(startInSeconds,endInSeconds));
+            }else{
+                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+            }
+        }
+        
+        //for fourth stretch
+        if(stretchFourSundaySelect.isSelected()){
+            //get hours an minuts of start
+            String startTime=getValueString(TimeSpinSunday7.getValue().toString());
+            StringTokenizer startReader = new StringTokenizer(startTime,"(:)");
+            int startHour = Integer.parseInt(startReader.nextToken());
+            int startMminut = Integer.parseInt(startReader.nextToken());
+            
+            
+            //get hours an minuts of end
+            String endTime = getValueString(TimeSpinSunday8.getValue().toString());
+            StringTokenizer endReader = new StringTokenizer(endTime,"(:)");
+            int endHour = Integer.parseInt(endReader.nextToken());
+            int endMinute = Integer.parseInt(endReader.nextToken());
+
+            int startInSeconds = getInSeconds(startHour,startMminut);
+            int endInSeconds = getInSeconds(endHour,endMinute);
+            
+            //collect and put in a timestretch and save to list if start is smaller than end
+            if(startInSeconds < endInSeconds){
+                tempList.add(new TimeStretch(startInSeconds,endInSeconds));
+            }else{
+                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+            }
+        }
+        return tempList;
+    }  
     
+    //get the string with the time value in hh:mm format
+    private String getValueString(String value){
+        StringTokenizer reader = new StringTokenizer(value,"( )");   
+        reader.nextToken();reader.nextToken();reader.nextToken();    //read and discard junk
+        return reader.nextToken();                                   //get wanted ino
+    }
+    
+    private int getInSeconds(int hour,int min){
+        return (hour*3600)+(min*60);            //return total in seconds
+    }
     private javax.swing.JSpinner TimeSpinSunday1;
     private javax.swing.JSpinner TimeSpinSunday2;
     private javax.swing.JSpinner TimeSpinSunday3;

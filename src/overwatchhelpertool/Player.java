@@ -3,6 +3,8 @@
  */
 package overwatchhelpertool;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,9 +85,26 @@ public class Player {
                 weekday = "Sunday";
                 break;
             default:
-                weekday = "hey programmer... you fucked up";
+                weekday = "hey programmer... there is a mistake";
                 break;
         }
         return weekday;
+    }
+    
+    public void saveUser(){
+        try(FileWriter user = new FileWriter(new File("user_info\\"+username+"_schedule.txt").getAbsolutePath(),false)){
+            
+            for(int i = 0;i<playerSchedule.giveDayAmount();i++){                                 //loop through days
+            user.write(playerSchedule.giveDayAtIndex(i).name+"\n\r");                            //write weekday
+            for(int u = 0; u < playerSchedule.giveDayAtIndex(i).giveStretchAmount(); u++ ){      //loop through timestretches
+                user.write(playerSchedule.giveDayAtIndex(i).giveStretchAtIndexStart(u));
+                user.write(",");
+                user.write(playerSchedule.giveDayAtIndex(i).giveStretchAtIndexEnd(u));
+            }
+            }
+            user.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 }

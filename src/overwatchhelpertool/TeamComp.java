@@ -24,6 +24,7 @@ public class TeamComp {
    protected String Hero4;                           //name of hero
    protected String Hero5;                           //name of hero
    protected String Hero6;                           //name of hero
+   private int winrate;                              //winrate of teamcomp
 
    
    public TeamComp(){

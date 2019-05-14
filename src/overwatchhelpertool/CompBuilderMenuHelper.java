@@ -35,14 +35,24 @@ public class CompBuilderMenuHelper {
         String name = t.getName();
         String note = t.getNote();
         if(name != null){
-        File temp = new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt");
+        File temp = new File("Team_Comps\\"+name+".txt");
         
-        String toWrite = t.Hero1+","+t.Hero2+","+t.Hero3+","+t.Hero4+","+t.Hero5+","+t.Hero6+","+note;
+        String heroes = t.Hero1+","+t.Hero2+","+t.Hero3+","+t.Hero4
+                +","+t.Hero5+","+t.Hero6+","+note+"\r\n";
 
+        StringBuilder toWrite = new StringBuilder();
+        toWrite.append(heroes);
+        for(int i = 0; i < t.getMapListSize(); i++){
+            if(t.getMapAtIndexFlag(i)){
+                toWrite.append(t.getMapAtIndexName(i));
+                toWrite.append(",");
+            }
+        }
+        
         if(temp.exists()){
             int result = JOptionPane.showConfirmDialog(null,"File already exists! wish to overwrite?");
             if(result == JOptionPane.YES_OPTION){
-               compSaveWrite(name,toWrite);
+               compSaveWrite(name,toWrite.toString());
                doneSaving = true;
             }else if(result == JOptionPane.NO_OPTION){
                 doneSaving = false;
@@ -50,7 +60,7 @@ public class CompBuilderMenuHelper {
                 doneSaving = true;
             }
         }else{
-            compSaveWrite(name,toWrite);
+            compSaveWrite(name,toWrite.toString());
             doneSaving = true;
         }
         }
@@ -59,7 +69,7 @@ public class CompBuilderMenuHelper {
     
     //the actual writing part of the saver
     private void compSaveWrite(String name, String s){
-         try(FileWriter comp = new FileWriter(new File("src\\overwatchhelpertool\\Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
+         try(FileWriter comp = new FileWriter(new File("Team_Comps\\"+name+".txt").getAbsolutePath(),false)){
              comp.write(s);
              comp.close();
        }catch(IOException e){

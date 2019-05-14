@@ -73,7 +73,7 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
@@ -112,7 +112,7 @@
                           <Group type="102" alignment="1" attributes="0">
                               <Component id="save" min="-2" pref="89" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="Discard" min="-2" pref="89" max="-2" attributes="0"/>
+                              <Component id="discard" min="-2" pref="89" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -184,7 +184,7 @@
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="save" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Discard" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="discard" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Component id="jScrollPane1" min="-2" pref="246" max="-2" attributes="0"/>
@@ -393,7 +393,7 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="horizonLunaColony">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Horizon Luna Colony"/>
+        <Property name="text" type="java.lang.String" value="Horizon_Luna_Colony"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="paris">
@@ -403,13 +403,16 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="templeOfAnubis">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Temple Of Anubis"/>
+        <Property name="text" type="java.lang.String" value="Temple_Of_Anubis"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="volskayaIndustries">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Volskaya Industries"/>
+        <Property name="text" type="java.lang.String" value="Volskaya_Industries"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volskayaIndustriesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JCheckBox" name="eichenwalde">
       <Properties>
@@ -423,7 +426,7 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="kingsRow">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Kings Row"/>
+        <Property name="text" type="java.lang.String" value="Kings_Row"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="numbani">
@@ -443,7 +446,7 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="lijiangTower">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Lijiang Tower"/>
+        <Property name="text" type="java.lang.String" value="Lijiang_Tower"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="nepal">
@@ -481,12 +484,12 @@
     </Component>
     <Component class="javax.swing.JCheckBox" name="blizzardWorld">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Blizzard World"/>
+        <Property name="text" type="java.lang.String" value="Blizzard_World"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="watchpointGibraltar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Watchpoint Gibraltar"/>
+        <Property name="text" type="java.lang.String" value="Watchpoint_Gibraltar"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="save">
@@ -497,10 +500,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saveActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Discard">
+    <Component class="javax.swing.JButton" name="discard">
       <Properties>
         <Property name="text" type="java.lang.String" value="Discard"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="4"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

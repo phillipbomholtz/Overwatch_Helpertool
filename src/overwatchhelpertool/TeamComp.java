@@ -91,4 +91,15 @@ public class TeamComp {
            }
        }
    }
+   
+   public int getMapListSize(){
+       return maps.size();
+   }
+   
+   public String getMapAtIndexName(int i){
+       return maps.get(i).Name;
+   }
+   public boolean getMapAtIndexFlag(int i){
+       return maps.get(i).enableFlag;
+   }
 } 

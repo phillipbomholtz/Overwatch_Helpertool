@@ -82,7 +82,7 @@ private TeamComp comp = new TeamComp();
         blizzardWorld = new javax.swing.JCheckBox();
         watchpointGibraltar = new javax.swing.JCheckBox();
         save = new javax.swing.JButton();
-        Discard = new javax.swing.JButton();
+        discard = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -175,19 +175,24 @@ private TeamComp comp = new TeamComp();
 
         jLabel1.setText("Intended maps:");
 
-        horizonLunaColony.setText("Horizon Luna Colony");
+        horizonLunaColony.setText("Horizon_Luna_Colony");
 
         paris.setText("Paris");
 
-        templeOfAnubis.setText("Temple Of Anubis");
+        templeOfAnubis.setText("Temple_Of_Anubis");
 
-        volskayaIndustries.setText("Volskaya Industries");
+        volskayaIndustries.setText("Volskaya_Industries");
+        volskayaIndustries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volskayaIndustriesActionPerformed(evt);
+            }
+        });
 
         eichenwalde.setText("Eichenwalde");
 
         hollywood.setText("Hollywood");
 
-        kingsRow.setText("Kings Row");
+        kingsRow.setText("Kings_Row");
 
         numbani.setText("Numbani");
 
@@ -195,7 +200,7 @@ private TeamComp comp = new TeamComp();
 
         ilios.setText("Ilios");
 
-        lijiangTower.setText("Lijiang Tower");
+        lijiangTower.setText("Lijiang_Tower");
 
         nepal.setText("Nepal");
 
@@ -214,9 +219,9 @@ private TeamComp comp = new TeamComp();
 
         route66.setText("Route 66");
 
-        blizzardWorld.setText("Blizzard World");
+        blizzardWorld.setText("Blizzard_World");
 
-        watchpointGibraltar.setText("Watchpoint Gibraltar");
+        watchpointGibraltar.setText("Watchpoint_Gibraltar");
 
         save.setText("Save");
         save.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +230,7 @@ private TeamComp comp = new TeamComp();
             }
         });
 
-        Discard.setText("Discard");
+        discard.setText("Discard");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -262,7 +267,7 @@ private TeamComp comp = new TeamComp();
                             .addComponent(HeroPort6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(HeroS6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(15, 15, 15)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addGroup(layout.createSequentialGroup()
@@ -296,7 +301,7 @@ private TeamComp comp = new TeamComp();
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(save, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(Discard, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(discard, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -355,7 +360,7 @@ private TeamComp comp = new TeamComp();
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(save)
-                            .addComponent(Discard)))
+                            .addComponent(discard)))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
@@ -434,13 +439,143 @@ private TeamComp comp = new TeamComp();
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         helper.doneSaving = false;
+        mapCheck();
         while(!helper.doneSaving){
             String s = JOptionPane.showInputDialog("name this team composition");
             comp.setName(s);
             comp.setNote(noteBox.getText());
+            for(int i = 0;i < comp.getMapListSize();i++){
+            System.out.println(comp.getMapAtIndexName(i));
+            }
+            helper.compSave(comp);
             
         }
     }//GEN-LAST:event_saveActionPerformed
+    //check what maps are enabled
+    private void mapCheck(){
+            if(busan.isSelected()){
+                comp.setMapFlagTrue("Busan");
+            }else{
+                comp.setMapFlagFalse("Busan");
+            }
+        
+            if(blizzardWorld.isSelected()){
+                comp.setMapFlagTrue("Blizzard_world");
+            }else{
+                comp.setMapFlagFalse("Blizzard_world");
+            }
+            
+            if(dorado.isSelected()){
+                comp.setMapFlagTrue("Dorado");
+            }else{
+                comp.setMapFlagFalse("Dorado");
+            }
+            
+            if(eichenwalde.isSelected()){
+                comp.setMapFlagTrue("Eichenwalde");
+            }else{
+                comp.setMapFlagFalse("Eichenwalde");
+            }
+            
+            if(hanamura.isSelected()){
+                comp.setMapFlagTrue("Hanamura");
+            }else{
+                comp.setMapFlagFalse("Hanamura");
+            }
+            
+            if(hollywood.isSelected()){
+                comp.setMapFlagTrue("Hollywood");
+            }else{
+                comp.setMapFlagFalse("Hollywood");
+            }
+            
+            if(horizonLunaColony.isSelected()){
+                comp.setMapFlagTrue("Horizon_luna_colony");
+            }else{
+                comp.setMapFlagFalse("Horizon_luna_colony");
+            }
+            
+            if(ilios.isSelected()){
+                comp.setMapFlagTrue("Ilios");
+            }else{
+                comp.setMapFlagFalse("Ilios");
+            }
+            
+            if(junkertown.isSelected()){
+                comp.setMapFlagTrue("Junkertown");
+            }else{
+                comp.setMapFlagFalse("Junkertown");
+            }
+            
+            if(kingsRow.isSelected()){
+                comp.setMapFlagTrue("Kings_row");
+            }else{
+                comp.setMapFlagFalse("Kings_row");
+            }
+            
+            if(lijiangTower.isSelected()){
+                comp.setMapFlagTrue("Lijiang_tower");
+            }else{
+                comp.setMapFlagFalse("Lijiang_tower");
+            }
+            
+            if(nepal.isSelected()){
+                comp.setMapFlagTrue("Nepal");
+            }else{
+                comp.setMapFlagFalse("Nepal");
+            }
+            
+            if(numbani.isSelected()){
+                comp.setMapFlagTrue("Numbani");
+            }else{
+                comp.setMapFlagFalse("Numbani");
+            }
+            
+            if(oasis.isSelected()){
+                comp.setMapFlagTrue("Oasis");
+            }else{
+                comp.setMapFlagFalse("Oasis");
+            }
+            
+            if(paris.isSelected()){
+                comp.setMapFlagTrue("Paris");
+            }else{
+                comp.setMapFlagFalse("Paris");
+            }
+            
+            if(rialto.isSelected()){
+                comp.setMapFlagTrue("Rialto");
+            }else{
+                comp.setMapFlagFalse("Rialto");
+            }
+            
+            if(route66.isSelected()){
+                comp.setMapFlagTrue("Route66");
+            }else{
+                comp.setMapFlagFalse("Route66");
+            }
+            
+            if(templeOfAnubis.isSelected()){
+                comp.setMapFlagTrue("Temple_of_anubis");
+            }else{
+                comp.setMapFlagFalse("Temple_of_anubis");
+            }
+            
+            if(volskayaIndustries.isSelected()){
+                comp.setMapFlagTrue("Volskaya_industries");
+            }else{
+                comp.setMapFlagFalse("Volskaya_industries");
+            }
+            
+            if(watchpointGibraltar.isSelected()){
+                comp.setMapFlagTrue("Watchpoint_gibraltar");
+            }else{
+                comp.setMapFlagFalse("Watchpoint_gibraltar");
+            }
+    }
+    private void volskayaIndustriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volskayaIndustriesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_volskayaIndustriesActionPerformed
 
     //read the hero file and return the string
     private String[] heroStringRead(){
@@ -467,7 +602,6 @@ private TeamComp comp = new TeamComp();
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Discard;
     private javax.swing.JLabel HeroPort1;
     private javax.swing.JLabel HeroPort2;
     private javax.swing.JLabel HeroPort3;
@@ -483,6 +617,7 @@ private TeamComp comp = new TeamComp();
     private javax.swing.JCheckBox blizzardWorld;
     private javax.swing.JCheckBox busan;
     private javax.swing.ButtonGroup buttonGroup1;
+    protected javax.swing.JButton discard;
     private javax.swing.JCheckBox dorado;
     private javax.swing.JCheckBox eichenwalde;
     private javax.swing.JCheckBox hanamura;

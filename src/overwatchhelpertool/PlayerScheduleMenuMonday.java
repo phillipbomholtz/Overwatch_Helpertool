@@ -36,38 +36,38 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        mondayTitle = new javax.swing.JLabel();
+        text1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         Date date = new Date();
         SpinnerDateModel DATE1 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday1 = new javax.swing.JSpinner(DATE1);
-        jLabel1 = new javax.swing.JLabel();
+        split1 = new javax.swing.JLabel();
         SpinnerDateModel DATE2 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday2 = new javax.swing.JSpinner(DATE2);
-        jLabel6 = new javax.swing.JLabel();
+        text2 = new javax.swing.JLabel();
         stretchOneMondaySelect = new javax.swing.JRadioButton();
         SpinnerDateModel DATE3 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday3 = new javax.swing.JSpinner(DATE3);
-        jLabel2 = new javax.swing.JLabel();
+        split2 = new javax.swing.JLabel();
         SpinnerDateModel DATE4 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday4 = new javax.swing.JSpinner(DATE4);
         SpinnerDateModel DATE5 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday5 = new javax.swing.JSpinner(DATE5);
-        jLabel3 = new javax.swing.JLabel();
+        split3 = new javax.swing.JLabel();
         SpinnerDateModel DATE6 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday6 = new javax.swing.JSpinner(DATE6);
         SpinnerDateModel DATE7 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday7 = new javax.swing.JSpinner(DATE7);
-        jLabel4 = new javax.swing.JLabel();
+        split4 = new javax.swing.JLabel();
         SpinnerDateModel DATE8 =
         new SpinnerDateModel(date, null, null, Calendar.HOUR_OF_DAY);
         TimeSpinMonday8 = new javax.swing.JSpinner(DATE8);
@@ -78,10 +78,10 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
         setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 472));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setText("Monday");
+        mondayTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        mondayTitle.setText("Monday");
 
-        jLabel5.setText("Here are the start and stop time");
+        text1.setText("Here are the start and stop time");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -91,12 +91,12 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
         JSpinner.DateEditor spin1 = new JSpinner.DateEditor(TimeSpinMonday1, "HH:mm");
         TimeSpinMonday1.setEditor(spin1);
 
-        jLabel1.setText("to");
+        split1.setText("to");
 
         JSpinner.DateEditor spin2 = new JSpinner.DateEditor(TimeSpinMonday2, "HH:mm");
         TimeSpinMonday2.setEditor(spin2);
 
-        jLabel6.setText("Select the stretches of time you are available for this day.");
+        text2.setText("Select the stretches of time you are available for this day.");
 
         stretchOneMondaySelect.setBackground(new java.awt.Color(204, 204, 204));
         stretchOneMondaySelect.setText("1st Stretch");
@@ -109,7 +109,7 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
         JSpinner.DateEditor spin3 = new JSpinner.DateEditor(TimeSpinMonday3, "HH:mm");
         TimeSpinMonday3.setEditor(spin3);
 
-        jLabel2.setText("to");
+        split2.setText("to");
 
         JSpinner.DateEditor spin4 = new JSpinner.DateEditor(TimeSpinMonday4, "HH:mm");
         TimeSpinMonday4.setEditor(spin4);
@@ -117,7 +117,7 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
         JSpinner.DateEditor spin5 = new JSpinner.DateEditor(TimeSpinMonday5, "HH:mm");
         TimeSpinMonday5.setEditor(spin5);
 
-        jLabel3.setText("to");
+        split3.setText("to");
 
         JSpinner.DateEditor spin6 = new JSpinner.DateEditor(TimeSpinMonday6, "HH:mm");
         TimeSpinMonday6.setEditor(spin6);
@@ -125,7 +125,7 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
         JSpinner.DateEditor spin7 = new JSpinner.DateEditor(TimeSpinMonday7, "HH:mm");
         TimeSpinMonday7.setEditor(spin7);
 
-        jLabel4.setText("to");
+        split4.setText("to");
 
         JSpinner.DateEditor spin8 = new JSpinner.DateEditor(TimeSpinMonday8, "HH:mm");
         TimeSpinMonday8.setEditor(spin8);
@@ -156,19 +156,19 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(TimeSpinMonday3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)
+                                .addComponent(split2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(TimeSpinMonday4, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(TimeSpinMonday5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel3)
+                                .addComponent(split3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(TimeSpinMonday6, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(TimeSpinMonday7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4)
+                                .addComponent(split4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(TimeSpinMonday8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
@@ -179,16 +179,16 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(TimeSpinMonday1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)
+                        .addComponent(split1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TimeSpinMonday2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(stretchOneMondaySelect, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7)
+                    .addComponent(mondayTitle)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(text1)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(text2, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
@@ -200,33 +200,33 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel7)
+                        .addComponent(mondayTitle)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
+                            .addComponent(text1)
+                            .addComponent(text2))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TimeSpinMonday1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
+                            .addComponent(split1)
                             .addComponent(TimeSpinMonday2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(stretchOneMondaySelect, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TimeSpinMonday3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
+                            .addComponent(split2)
                             .addComponent(TimeSpinMonday4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(stretchTwoMondaySelect, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TimeSpinMonday5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
+                            .addComponent(split3)
                             .addComponent(TimeSpinMonday6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(stretchThreeMondaySelect, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(41, 41, 41)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(TimeSpinMonday7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
+                            .addComponent(split4)
                             .addComponent(TimeSpinMonday8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(stretchFourMondaySelect, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(49, Short.MAX_VALUE))
@@ -266,7 +266,7 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
             if(startInSeconds < endInSeconds){
                 tempList.add(new TimeStretch(startInSeconds,endInSeconds));
             }else{
-                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+                JOptionPane.showMessageDialog(null,"Error in "+mondayTitle.getText()+". one start time is bigger or equal to end time");  //message for error
             }
         }
         
@@ -292,7 +292,7 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
             if(startInSeconds < endInSeconds){
                 tempList.add(new TimeStretch(startInSeconds,endInSeconds));
             }else{
-                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+                JOptionPane.showMessageDialog(null,"Error in "+mondayTitle.getText()+". one start time is bigger or equal to end time");  //message for error
             }
         }
         
@@ -318,7 +318,7 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
             if(startInSeconds < endInSeconds){
                 tempList.add(new TimeStretch(startInSeconds,endInSeconds));
             }else{
-                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+                JOptionPane.showMessageDialog(null,"Error in "+mondayTitle.getText()+". one start time is bigger or equal to end time");  //message for error
             }
         }
         
@@ -344,7 +344,7 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
             if(startInSeconds < endInSeconds){
                 tempList.add(new TimeStretch(startInSeconds,endInSeconds));
             }else{
-                JOptionPane.showMessageDialog(null,"Error in "+jLabel7.getText()+". one start time is bigger or equal to end time");  //message for error
+                JOptionPane.showMessageDialog(null,"Error in "+mondayTitle.getText()+". one start time is bigger or equal to end time");  //message for error
             }
         }
         return tempList;
@@ -369,13 +369,13 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
     private javax.swing.JSpinner TimeSpinMonday6;
     private javax.swing.JSpinner TimeSpinMonday7;
     private javax.swing.JSpinner TimeSpinMonday8;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel split1;
+    private javax.swing.JLabel split2;
+    private javax.swing.JLabel split3;
+    private javax.swing.JLabel split4;
+    private javax.swing.JLabel text1;
+    private javax.swing.JLabel text2;
+    private javax.swing.JLabel mondayTitle;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JRadioButton stretchFourMondaySelect;

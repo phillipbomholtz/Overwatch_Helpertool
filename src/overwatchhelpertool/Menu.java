@@ -59,9 +59,11 @@ public class Menu extends javax.swing.JPanel {
         playerLogin1.loginBot.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
             playerLogin1.loginCheck();                                        //check if login was correct
+            
             if(playerLogin1.loginStatus){
             jTabbedPane1.setSelectedIndex(1);                                 //change to player menu
-            player = playerLogin1.givePlayer();
+            player.username = playerLogin1.givePlayer();
+            player.password = playerLogin1.givePass();
             JOptionPane.showMessageDialog(null,"Login succesfull! welcome "+player.giveName());  //message on succesfull login
             
         }}});

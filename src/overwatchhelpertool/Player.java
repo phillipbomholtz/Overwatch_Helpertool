@@ -14,8 +14,8 @@ import java.util.List;
  */
 public class Player {
     
-    private String username;
-    private String password;
+    protected String username;
+    protected String password;
     private Schedule playerSchedule;           //the scedule of a single player
     private ArrayList<ArrayList<TimeStretch>> week = new ArrayList<ArrayList<TimeStretch>>();  //a list of timestretches for a whole week
     

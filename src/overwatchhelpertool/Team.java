@@ -10,9 +10,20 @@ import java.util.ArrayList;
  */
 public class Team {
    
+    private String name; 
     private ArrayList teammates = new ArrayList();       //list of teammates
     private ArrayList activeTeammates = new ArrayList(); //list op players active on the team.
     private Player ADMIN;                                //the player that is team admin
     private Schedule teamSchedule;                       //the teams schedule
     
+    public Team(String s){
+        this.name = s;
+    }
+    
+    public Schedule buildTeamSchedule(){
+        boolean fin = false;
+        while(!fin){
+            
+        }
+    }
 }

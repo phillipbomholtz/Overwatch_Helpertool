@@ -12,7 +12,8 @@ import javax.swing.JOptionPane;
  */
 public class PlayerLogin extends javax.swing.JPanel {
     public boolean loginStatus = false;
-    private Player user;
+    private String name;
+    private String pass;
     /**
      * Creates new form PlayerLogin
      */
@@ -29,21 +30,21 @@ public class PlayerLogin extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
+        userText = new javax.swing.JLabel();
+        passText = new javax.swing.JLabel();
         loginBot = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\logo.png").getAbsolutePath()));
-        jLabel1.setText("jLabel1");
-        jLabel1.setMaximumSize(new java.awt.Dimension(500, 450));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1000, 500));
+        logo.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\logo.png").getAbsolutePath()));
+        logo.setText("jLabel1");
+        logo.setMaximumSize(new java.awt.Dimension(500, 450));
+        logo.setPreferredSize(new java.awt.Dimension(1000, 500));
 
         username.setText("Username");
         username.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -64,12 +65,12 @@ public class PlayerLogin extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        jLabel2.setText("login");
+        Title.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        Title.setText("login");
 
-        jLabel3.setText("Username");
+        userText.setText("Username");
 
-        jLabel4.setText("Password");
+        passText.setText("Password");
 
         loginBot.setText("Login");
 
@@ -79,14 +80,14 @@ public class PlayerLogin extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(loginBot)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel2)
+                    .addComponent(userText)
+                    .addComponent(Title)
                     .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                    .addComponent(jLabel4)
+                    .addComponent(passText)
                     .addComponent(password))
                 .addGap(372, 372, 372))
         );
@@ -96,18 +97,18 @@ public class PlayerLogin extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
-                        .addComponent(jLabel2)
+                        .addComponent(Title)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel3)
+                        .addComponent(userText)
                         .addGap(18, 18, 18)
                         .addComponent(username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
+                        .addComponent(passText)
                         .addGap(18, 18, 18)
                         .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(loginBot))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(442, 442, 442))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -127,12 +128,12 @@ public class PlayerLogin extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel Title;
     protected javax.swing.JButton loginBot;
+    private javax.swing.JLabel logo;
+    private javax.swing.JLabel passText;
     private javax.swing.JPasswordField password;
+    private javax.swing.JLabel userText;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 
@@ -154,8 +155,9 @@ protected void loginCheck(){
           
           if(tempUser.equals(username.getText())){
            if(tempPass.equals(password.getText())){
+               name = username.getText();
+               pass = password.getText();
                loginStatus = true;
-               this.user = new Player(tempUser,tempPass);                       //make a player 
                break;
            }
        }
@@ -171,9 +173,12 @@ protected void loginCheck(){
         }
 }
 
-protected Player givePlayer(){
-    return user;
+protected String givePlayer(){
+    return name;
 }
 
+protected String givePass(){
+    return pass;
+}
   
 }

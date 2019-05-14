@@ -28,40 +28,40 @@ public class PlayerMenu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
         welcomeText = new javax.swing.JLabel();
         teamBox = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextPane1 = new javax.swing.JTextPane();
+        text = new javax.swing.JTextPane();
         scheduleCreate = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        teamButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 204));
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\logo.png").getAbsolutePath()));
-        jLabel1.setText("jLabel1");
-        jLabel1.setMaximumSize(new java.awt.Dimension(500, 450));
-        jLabel1.setPreferredSize(new java.awt.Dimension(1000, 500));
+        logo.setIcon(new javax.swing.ImageIcon(new File("src\\overwatchhelpertool\\logo.png").getAbsolutePath()));
+        logo.setText("jLabel1");
+        logo.setMaximumSize(new java.awt.Dimension(500, 450));
+        logo.setPreferredSize(new java.awt.Dimension(1000, 500));
 
         welcomeText.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         welcomeText.setText("Player Menu");
 
         teamBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jTextPane1.setText("Teams you are in:");
-        jScrollPane1.setViewportView(jTextPane1);
+        text.setText("Teams you are in:");
+        jScrollPane1.setViewportView(text);
 
         scheduleCreate.setText("Create schedule");
 
-        jButton1.setText("Enter team menu");
+        teamButton.setText("Enter team menu");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(welcomeText)
@@ -69,13 +69,13 @@ public class PlayerMenu extends javax.swing.JPanel {
                         .addComponent(scheduleCreate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(teamBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(teamButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(0, 235, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
@@ -85,7 +85,7 @@ public class PlayerMenu extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(teamBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
+                .addComponent(teamButton)
                 .addGap(89, 89, 89)
                 .addComponent(scheduleCreate)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -94,12 +94,12 @@ public class PlayerMenu extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JLabel logo;
     protected javax.swing.JButton scheduleCreate;
     private javax.swing.JComboBox<String> teamBox;
+    private javax.swing.JButton teamButton;
+    private javax.swing.JTextPane text;
     private javax.swing.JLabel welcomeText;
     // End of variables declaration//GEN-END:variables
 }

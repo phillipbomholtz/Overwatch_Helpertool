@@ -95,7 +95,7 @@ public class Player {
         try(FileWriter user = new FileWriter(new File("user_info\\"+username+"_schedule.txt").getAbsolutePath(),false)){
             
             for(int i = 0;i<playerSchedule.giveDayAmount();i++){                                 //loop through days
-            user.write(playerSchedule.giveDayAtIndex(i).name+"\n\r");                            //write weekday
+            user.write(playerSchedule.giveDayAtIndex(i).name+"\n");                            //write weekday
             for(int u = 0; u < playerSchedule.giveDayAtIndex(i).giveStretchAmount(); u++ ){      //loop through timestretches
                 user.write(playerSchedule.giveDayAtIndex(i).giveStretchAtIndexStart(u));
                 user.write(",");

@@ -241,8 +241,8 @@ public class PlayerScheduleMenuMonday extends javax.swing.JPanel {
         // TODO add your handling code here:
     }                                                       
 
- public List<TimeStretch> GiveTimeStreches(){
-        List<TimeStretch> tempList = new ArrayList<>();
+ public ArrayList<TimeStretch> GiveTimeStreches(){
+        ArrayList<TimeStretch> tempList = new ArrayList<>();
         
         //for first stretch
         if(stretchOneMondaySelect.isSelected()){

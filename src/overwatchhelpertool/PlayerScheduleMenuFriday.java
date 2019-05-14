@@ -225,8 +225,8 @@ public class PlayerScheduleMenuFriday extends javax.swing.JPanel {
         );
     }// </editor-fold>                        
 
-    public List<TimeStretch> GiveTimeStreches(){
-        List<TimeStretch> tempList = new ArrayList<>();
+    public ArrayList<TimeStretch> GiveTimeStreches(){
+        ArrayList<TimeStretch> tempList = new ArrayList<>();
         
         //for first stretch
         if(stretchOneFridaySelect.isSelected()){

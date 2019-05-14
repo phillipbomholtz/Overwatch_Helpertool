@@ -6,6 +6,7 @@
 package overwatchhelpertool;
 import java.awt.event.*;
 import java.io.File;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 /**
  *
@@ -69,6 +70,14 @@ public class Menu extends javax.swing.JPanel {
         playerMenu1.scheduleCreate.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
             jTabbedPane1.setSelectedIndex(2);                                  //change to schedule creating window
+        }});
+        
+        //for create schedule botten on player menu
+        playerScheduleMenu1.finalBotten.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            player.buildSchedule(playerScheduleMenu1.save());
+            player.saveUser();
+            jTabbedPane1.setSelectedIndex(1);                                  //change to user menu
         }});
     }
 

@@ -42,7 +42,8 @@ public class PlayerScheduleMenu extends javax.swing.JPanel {
         playerScheduleMenuFriday1 = new overwatchhelpertool.PlayerScheduleMenuFriday();
         playerScheduleMenuSaturday1 = new overwatchhelpertool.PlayerScheduleMenuSaturday();
         playerScheduleMenuSunday1 = new overwatchhelpertool.PlayerScheduleMenuSunday();
-        finishBotten = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        finalBotten = new javax.swing.JButton();
 
         jRadioButton4.setText("jRadioButton1");
 
@@ -58,13 +59,26 @@ public class PlayerScheduleMenu extends javax.swing.JPanel {
         jTabbedPane1.addTab("Saturday", playerScheduleMenuSaturday1);
         jTabbedPane1.addTab("Sunday", playerScheduleMenuSunday1);
 
-        finishBotten.setText("Click anywhere to finalize");
-        finishBotten.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                finishBottenMouseClicked(evt);
-            }
-        });
-        jTabbedPane1.addTab("Finalize", finishBotten);
+        finalBotten.setText("Click to finalize");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(444, 444, 444)
+                .addComponent(finalBotten)
+                .addContainerGap(444, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(227, Short.MAX_VALUE)
+                .addComponent(finalBotten)
+                .addGap(222, 222, 222))
+        );
+
+        jTabbedPane1.addTab("tab8", jPanel1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -78,13 +92,23 @@ public class PlayerScheduleMenu extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void finishBottenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_finishBottenMouseClicked
-        System.out.println(playerScheduleMenuThursday1.GiveTimeStreches());
-    }//GEN-LAST:event_finishBottenMouseClicked
-
-
+    protected ArrayList<ArrayList<TimeStretch>> save(){
+         ArrayList<ArrayList<TimeStretch>> saveList = new ArrayList<ArrayList<TimeStretch>>();
+         
+            //save all user entered information
+            saveList.add(playerScheduleMenuMonday1.GiveTimeStreches());
+            saveList.add(playerScheduleMenuTuesday1.GiveTimeStreches());
+            saveList.add(playerScheduleMenuWednesday1.GiveTimeStreches());
+            saveList.add(playerScheduleMenuThursday1.GiveTimeStreches());
+            saveList.add(playerScheduleMenuFriday1.GiveTimeStreches());
+            saveList.add(playerScheduleMenuSaturday1.GiveTimeStreches());
+            saveList.add(playerScheduleMenuSunday1.GiveTimeStreches());
+            return saveList;
+            
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton finishBotten;
+    protected javax.swing.JButton finalBotten;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButton jRadioButton4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private overwatchhelpertool.PlayerScheduleMenuFriday playerScheduleMenuFriday1;

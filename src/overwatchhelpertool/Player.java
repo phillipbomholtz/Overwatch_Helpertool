@@ -94,12 +94,13 @@ public class Player {
     public void saveUser(){
         try(FileWriter user = new FileWriter(new File("user_info\\"+username+"_schedule.txt").getAbsolutePath(),false)){
             
-            for(int i = 0;i<playerSchedule.giveDayAmount();i++){                                 //loop through days
-            user.write(playerSchedule.giveDayAtIndex(i).name+"\n");                            //write weekday
-            for(int u = 0; u < playerSchedule.giveDayAtIndex(i).giveStretchAmount(); u++ ){      //loop through timestretches
-                user.write(playerSchedule.giveDayAtIndex(i).giveStretchAtIndexStart(u));
-                user.write(",");
-                user.write(playerSchedule.giveDayAtIndex(i).giveStretchAtIndexEnd(u));
+            for(int i = 0;i<playerSchedule.giveDayAmount();i++){                                                       //loop through days
+            user.write(playerSchedule.giveDayAtIndex(i).name+"\r\n");                                                  //write weekday
+            for(int u = 0; u < playerSchedule.giveDayAtIndex(i).giveStretchAmount(); u++ ){                            //loop through timestretches
+                user.write(new Integer(playerSchedule.giveDayAtIndex(i).giveStretchAtIndexStart(u)).toString());       //write timestretch start
+                user.write(",");                                                                                       //separate with comma
+                user.write(new Integer(playerSchedule.giveDayAtIndex(i).giveStretchAtIndexEnd(u)).toString());         //write timestretch end
+                user.write("\r\n");                                                                                    //write newline
             }
             }
             user.close();

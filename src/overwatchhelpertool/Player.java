@@ -16,8 +16,14 @@ public class Player {
     
     protected String username;
     protected String password;
-    private Schedule playerSchedule;           //the scedule of a single player
+    private Schedule playerSchedule;                                                           //the scedule of a single player
     private ArrayList<ArrayList<TimeStretch>> week = new ArrayList<ArrayList<TimeStretch>>();  //a list of timestretches for a whole week
+    
+    public Player(String user){
+        //set username and password
+        this.username = user;
+        this.playerSchedule = new Schedule();
+    }
     
     public Player(String user, String pass){
         //set username and password

@@ -4,6 +4,7 @@ import java.awt.event.MouseAdapter;
 import java.io.File;
 import java.io.FileReader;        //needed for reading file
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.StringTokenizer;
 import javax.swing.JOptionPane;
 /**
@@ -163,12 +164,13 @@ protected void loginCheck(){
        }
          searchstring = userFileReader.readLine();                              //read new line
       }
+        userFileReader.close();
         
       //check if login was incorrect
       if(!tempUser.equals(username.getText()) || !tempPass.equals(password.getText())){
          JOptionPane.showMessageDialog(null,"Incorrect login");
       }
-        }catch(Exception e){
+        }catch(IOException e){
             e.printStackTrace();
         }
 }

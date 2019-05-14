@@ -62,8 +62,8 @@ public class Menu extends javax.swing.JPanel {
             
             if(playerLogin1.loginStatus){
             jTabbedPane1.setSelectedIndex(1);                                 //change to player menu
-            player.username = playerLogin1.givePlayer();
-            player.password = playerLogin1.givePass();
+            System.out.println(playerLogin1.givePlayer()+playerLogin1.givePass());
+            player = new Player(playerLogin1.givePlayer(),playerLogin1.givePass());
             JOptionPane.showMessageDialog(null,"Login succesfull! welcome "+player.giveName());  //message on succesfull login
             
         }}});

@@ -65,12 +65,9 @@ public class TeamMenu extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(mainTeamMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(menuTitle)
-                    .addComponent(teamCompButton))
+                    .addComponent(teamCompButton)
+                    .addComponent(back))
                 .addContainerGap(765, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainTeamMenuLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(back)
-                .addContainerGap())
         );
         mainTeamMenuLayout.setVerticalGroup(
             mainTeamMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,9 +76,9 @@ public class TeamMenu extends javax.swing.JPanel {
                 .addComponent(menuTitle)
                 .addGap(18, 18, 18)
                 .addComponent(teamCompButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 380, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(back)
-                .addContainerGap())
+                .addContainerGap(380, Short.MAX_VALUE))
         );
 
         menuPanes.addTab("tab2", mainTeamMenu);

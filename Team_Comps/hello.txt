@@ -1,0 +1,2 @@
+Baptiste,Bastion,Doomfist,Ashe,Baptiste,Doomfist,this will work
+Hanamura,Rialto,Kings_row,Temple_of_anubis,Numbani,Blizzard_world,Watchpoint_gibraltar

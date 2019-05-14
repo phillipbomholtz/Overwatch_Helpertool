@@ -47,7 +47,7 @@ public class PlayerMenu extends javax.swing.JPanel {
         welcomeText.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         welcomeText.setText("Player Menu");
 
-        teamBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        teamBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "DTU" }));
 
         text.setText("Teams you are in:");
         jScrollPane1.setViewportView(text);

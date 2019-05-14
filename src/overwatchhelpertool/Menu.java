@@ -31,26 +31,28 @@ public class Menu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        menuPanes = new javax.swing.JTabbedPane();
         playerLogin1 = new overwatchhelpertool.PlayerLogin();
         playerMenu1 = new overwatchhelpertool.PlayerMenu();
         playerScheduleMenu1 = new overwatchhelpertool.PlayerScheduleMenu();
+        teamMenu1 = new overwatchhelpertool.TeamMenu();
 
         setPreferredSize(new java.awt.Dimension(1000, 500));
 
-        jTabbedPane1.addTab("tab2", playerLogin1);
-        jTabbedPane1.addTab("tab2", playerMenu1);
-        jTabbedPane1.addTab("tab3", playerScheduleMenu1);
+        menuPanes.addTab("tab2", playerLogin1);
+        menuPanes.addTab("tab2", playerMenu1);
+        menuPanes.addTab("tab3", playerScheduleMenu1);
+        menuPanes.addTab("tab4", teamMenu1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(menuPanes)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(menuPanes)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -61,7 +63,7 @@ public class Menu extends javax.swing.JPanel {
             playerLogin1.loginCheck();                                        //check if login was correct
             
             if(playerLogin1.loginStatus){
-            jTabbedPane1.setSelectedIndex(1);                                 //change to player menu
+            menuPanes.setSelectedIndex(1);                                 //change to player menu
             System.out.println(playerLogin1.givePlayer()+playerLogin1.givePass());
             player = new Player(playerLogin1.givePlayer(),playerLogin1.givePass());
             JOptionPane.showMessageDialog(null,"Login succesfull! welcome "+player.giveName());  //message on succesfull login
@@ -71,7 +73,7 @@ public class Menu extends javax.swing.JPanel {
         //for create schedule botten on player menu
         playerMenu1.scheduleCreate.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
-            jTabbedPane1.setSelectedIndex(2);                                  //change to schedule creating window
+            menuPanes.setSelectedIndex(2);                                  //change to schedule creating window
         }});
         
         //for create schedule botten on player menu
@@ -79,14 +81,15 @@ public class Menu extends javax.swing.JPanel {
         public void actionPerformed(ActionEvent e){
             player.buildSchedule(playerScheduleMenu1.save());
             player.saveUser();
-            jTabbedPane1.setSelectedIndex(1);                                  //change to user menu
+            menuPanes.setSelectedIndex(1);                                  //change to user menu
         }});
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane menuPanes;
     private overwatchhelpertool.PlayerLogin playerLogin1;
     private overwatchhelpertool.PlayerMenu playerMenu1;
     private overwatchhelpertool.PlayerScheduleMenu playerScheduleMenu1;
+    private overwatchhelpertool.TeamMenu teamMenu1;
     // End of variables declaration//GEN-END:variables
 }

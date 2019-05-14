@@ -32,28 +32,30 @@ public class TeamMenu extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        compBuilderMenu1 = new overwatchhelpertool.CompBuilderMenu();
+        menuPanes = new javax.swing.JTabbedPane();
         mainTeamMenu = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        menuTitle = new javax.swing.JLabel();
+        teamCompButton = new javax.swing.JButton();
+        back = new javax.swing.JButton();
+        compBuilderMenu1 = new overwatchhelpertool.CompBuilderMenu();
 
         setBackground(new java.awt.Color(204, 204, 204));
 
-        jTabbedPane1.setBackground(new java.awt.Color(204, 204, 204));
-        jTabbedPane1.addTab("tab1", compBuilderMenu1);
+        menuPanes.setBackground(new java.awt.Color(204, 204, 204));
 
         mainTeamMenu.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setText("Main Team menu! Welcome");
+        menuTitle.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        menuTitle.setText("Main Team menu! Welcome");
 
-        jButton1.setText("Make Teamcomposition");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        teamCompButton.setText("Make Teamcomposition");
+        teamCompButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                teamCompButtonActionPerformed(evt);
             }
         });
+
+        back.setText("Back");
 
         javax.swing.GroupLayout mainTeamMenuLayout = new javax.swing.GroupLayout(mainTeamMenu);
         mainTeamMenu.setLayout(mainTeamMenuLayout);
@@ -62,37 +64,44 @@ public class TeamMenu extends javax.swing.JPanel {
             .addGroup(mainTeamMenuLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(mainTeamMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jButton1))
+                    .addComponent(menuTitle)
+                    .addComponent(teamCompButton))
                 .addContainerGap(765, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainTeamMenuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(back)
+                .addContainerGap())
         );
         mainTeamMenuLayout.setVerticalGroup(
             mainTeamMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(mainTeamMenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(menuTitle)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(414, Short.MAX_VALUE))
+                .addComponent(teamCompButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 380, Short.MAX_VALUE)
+                .addComponent(back)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab("tab2", mainTeamMenu);
+        menuPanes.addTab("tab2", mainTeamMenu);
+        menuPanes.addTab("tab1", compBuilderMenu1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
+            .addComponent(menuPanes, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
+            .addComponent(menuPanes, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jTabbedPane1.setSelectedIndex(0);  //go to team comp menu
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void teamCompButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_teamCompButtonActionPerformed
+        menuPanes.setSelectedIndex(1);  //go to team comp menu
+    }//GEN-LAST:event_teamCompButtonActionPerformed
 
  private void createActionListeners(){
         
@@ -100,16 +109,17 @@ public class TeamMenu extends javax.swing.JPanel {
         //for create schedule botten on player menu
         compBuilderMenu1.discard.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e){
-            jTabbedPane1.setSelectedIndex(1);                                  //change back to team menu
+            menuPanes.setSelectedIndex(0);                                  //change back to team menu
         }});
         
         
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    protected javax.swing.JButton back;
     private overwatchhelpertool.CompBuilderMenu compBuilderMenu1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel mainTeamMenu;
+    private javax.swing.JTabbedPane menuPanes;
+    private javax.swing.JLabel menuTitle;
+    private javax.swing.JButton teamCompButton;
     // End of variables declaration//GEN-END:variables
 }

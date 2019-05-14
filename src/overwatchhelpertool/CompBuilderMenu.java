@@ -440,8 +440,10 @@ private TeamComp comp = new TeamComp();
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         helper.doneSaving = false;
         mapCheck();
-        while(!helper.doneSaving){
-            String s = JOptionPane.showInputDialog("name this team composition");
+        String s="helloThere";
+        do{
+            s = JOptionPane.showInputDialog("name this team composition");
+            System.out.println(s);
             comp.setName(s);
             comp.setNote(noteBox.getText());
             for(int i = 0;i < comp.getMapListSize();i++){
@@ -449,7 +451,7 @@ private TeamComp comp = new TeamComp();
             }
             helper.compSave(comp);
             
-        }
+        }while(!helper.doneSaving && s != null);
     }//GEN-LAST:event_saveActionPerformed
     //check what maps are enabled
     private void mapCheck(){

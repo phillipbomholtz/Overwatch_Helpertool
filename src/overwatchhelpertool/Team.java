@@ -17,35 +17,36 @@ public class Team {
    
     private String name; 
     private ArrayList<Player> teamMates = new ArrayList<Player>();  //list of teammates
-   // private Admin ADMIN;                                    //the player that is team admin
-    private Schedule teamSchedule;                          //the teams schedule
+    private Schedule teamSchedule;                                  //the teams schedule
     
     public Team(String s){
-        this.name = s;
-        loadMembers();
+        this.name = s;      //name team
+        loadMembers();      //load members of this team
     }
     
+    //method for loading in teammembers
     private void loadMembers(){
         try{
-            
+        //readers for file   
         FileReader userReader = new FileReader(new File(name+"_team\\Team_users.txt").getAbsolutePath());
-        BufferedReader userFileReader = new BufferedReader(userReader);  
-        String inputLine = userFileReader.readLine();
+        BufferedReader userFileReader = new BufferedReader(userReader); 
+        
+        String inputLine = userFileReader.readLine();                    //read an input line
         
         while(inputLine != null){
-            
-            teamMates.add(new Player(inputLine));
-            inputLine = userFileReader.readLine();
+            teamMates.add(new Player(inputLine));  //add a new player
+            inputLine = userFileReader.readLine(); //read new line
         }
         
-        userFileReader.close();
+        userFileReader.close(); //close file
         
         }catch(IOException e){
             e.printStackTrace();
         }
-        loadMemberSchedule();
+        loadMemberSchedule(); //load member schedule
     }
     
+    //method for loading in team members schedules
     private void loadMemberSchedule(){
         for(int i = 0;i < teamMates.size();i++){
             
@@ -64,10 +65,7 @@ public class Team {
         
         //use filter to get rid of day strings
         String input = scheduleFileReader.readLine();
-        System.out.println(username);
         while(input != null){
-            
-        //System.out.println(input);
         switch (input){
             case "Monday":
                 split = true;
@@ -96,44 +94,31 @@ public class Team {
                 int start = Integer.parseInt(st.nextToken());                   //remember start
                 int end = Integer.parseInt(st.nextToken());                     //remember end
                 tempStretchList.add(new TimeStretch(start,end));                //add stretch
-                //System.out.println(tempStretchList.get((tempStretchList.size()-1)).giveStart());
-                //System.out.println(tempStretchList.get((tempStretchList.size()-1)).giveEnd()); 
                 break;
           }
         
+        //when a new day comes up and previus had data
         if(split && !tempStretchList.isEmpty()){
-            tempWeekList.add(tempStretchList);
              ArrayList<TimeStretch> transferArray = tempStretchList;
-            System.out.println(tempWeekList);
+             tempWeekList.add(transferArray);
             tempStretchList.clear();
-            System.out.println(tempWeekList);
         }
-        input = scheduleFileReader.readLine();
+        input = scheduleFileReader.readLine();  //read new liner
         }
         
         }catch(IOException e){
             e.printStackTrace();
         }
-        System.out.println(tempWeekList);
         tempPlayer.buildSchedule(tempWeekList);                                 //make schedule for player
-       // System.out.println(tempPlayer.giveSchedule().giveDayAtIndex(0).giveStretchAtIndexStart(0));
-       // System.out.println(tempPlayer.giveSchedule().giveDayAtIndex(0).giveStretchAtIndexEnd(0));
         teamMates.set(i, tempPlayer);                                           //replace player without schedule with the one that has
         
-        for(int f = 0; f < teamMates.get(i).giveSchedule().days.size();f++){
-        //System.out.println("hello");
-        Schedule temp =tempPlayer.giveSchedule();
-        Day temp2 = temp.giveDayAtIndex(f);
-        //System.out.println(temp2.giveStretchAmount());
-        for(int h = 0; h<temp2.giveStretchAmount();h++){
-        System.out.println(tempPlayer.username+" "+temp2.name+" "+temp2.giveStretchAtIndexStart(h)+" "+temp2.giveStretchAtIndexEnd(h));
-        }
-      }
+       
+      
 
     }
 
     }
-        /*
+    /* is not done yet
     private Schedule buildTeamSchedule(){
         boolean fin = false;
         while(!fin){

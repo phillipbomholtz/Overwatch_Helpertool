@@ -5,6 +5,10 @@
  */
 package overwatchhelpertool;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Phillip
@@ -30,11 +34,49 @@ public class TeamMenu extends javax.swing.JPanel {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         compBuilderMenu1 = new overwatchhelpertool.CompBuilderMenu();
+        mainTeamMenu = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(204, 204, 204));
 
         jTabbedPane1.setBackground(new java.awt.Color(204, 204, 204));
         jTabbedPane1.addTab("tab1", compBuilderMenu1);
+
+        mainTeamMenu.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel1.setText("Main Team menu! Welcome");
+
+        jButton1.setText("Make Teamcomposition");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout mainTeamMenuLayout = new javax.swing.GroupLayout(mainTeamMenu);
+        mainTeamMenu.setLayout(mainTeamMenuLayout);
+        mainTeamMenuLayout.setHorizontalGroup(
+            mainTeamMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainTeamMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(mainTeamMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1))
+                .addContainerGap(765, Short.MAX_VALUE))
+        );
+        mainTeamMenuLayout.setVerticalGroup(
+            mainTeamMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainTeamMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(414, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("tab2", mainTeamMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -48,9 +90,26 @@ public class TeamMenu extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jTabbedPane1.setSelectedIndex(0);  //go to team comp menu
+    }//GEN-LAST:event_jButton1ActionPerformed
 
+ private void createActionListeners(){
+        
+        
+        //for create schedule botten on player menu
+        compBuilderMenu1.discard.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e){
+            jTabbedPane1.setSelectedIndex(1);                                  //change back to team menu
+        }});
+        
+        
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private overwatchhelpertool.CompBuilderMenu compBuilderMenu1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel mainTeamMenu;
     // End of variables declaration//GEN-END:variables
 }
